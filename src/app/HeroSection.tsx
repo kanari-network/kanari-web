@@ -5,34 +5,30 @@ import ScrollCarousel from './ScrollCarousel'
 interface Props {}
 
 const HeroSection: NextPage<Props> = ({}) => {
-
-    
   return <div className='bg-[#0b1521]'>
-
-<nav className="backdrop-blur-3xl text-white fixed top-0 left-0 w-full z-10">
-  <div className="mx-auto flex flex-wrap items-center justify-between p-2.5 ">
-    <div className="flex items-center space-x-2 justify-start ">
+    <nav className=" backdrop-blur-3xl text-white fixed top-0 left-0 w-full z-10">
+        <div className=" mx-auto flex flex-wrap items-center justify-between p-2.5 ">
+            <div className=" flex items-center space-x-2 justify-start ">
                 <a href="#">
                     <img src="/iconkari.svg" className="w-12 h-12 " alt="Kanari Network "/>
                 </a>
                 <a href="#" className="text-2xl font-medium">
                     Kanari
-                </a> 
-    </div>
-
-    <div className="flex space-x-20 items-center"> <button id="menu-button" className="md:hidden"> <img src="/iconkari.svg" alt="Menu" /> 
-      </button>
-      <ul className="md:flex space-x-20 hidden" id="menu-items"> <li><a href="#">Learn</a></li> 
-        <li><a href="#">Build</a></li> 
-        <li><a href="#">Connect</a></li> 
-      </ul>
-    </div>
-
-    <div className="flex justify-end ">
-        <a href="#" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Get started</a>
-    </div>
-  </div>
-</nav>
+                </a>    
+            </div>
+            <div className=""> 
+            <ul className="flex space-x-20"> 
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Build</a></li>
+                <li><a href="#">Connect</a></li>
+            </ul>
+            </div>
+        
+            <div className="flex justify-end ">
+            <a href="#" className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Get started</a>
+            </div>
+        </div>
+    </nav>
 
     <main>
         <div className="py-20 px-2">
