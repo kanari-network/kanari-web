@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rounded-md {
+    border-radius: 1.5rem; /* Adjust the value for different levels of rounding */
+}
