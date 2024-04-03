@@ -43,7 +43,7 @@ const HeroSection: NextPage<Props> = ({}) => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                     <div className=" h-96 w-full p-6 backdrop-blur-3xl rounded-lg shadow">
                         <a href="#">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tigh text-white">Subscribe to receive Sui's newsletter and get the latest news, updates, and insights</h5>
+                            <h5 className="mb-2 text-2xl font-bold tracking-tigh text-white">Subscribe to receive Kanari Network newsletter and get the latest news, updates, and insights</h5>
                         </a>
                     
                         <form className="">   
