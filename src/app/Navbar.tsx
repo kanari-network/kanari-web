@@ -33,7 +33,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Kanari Network
+            Kanari
           </a>
         </h1>
       </div>
