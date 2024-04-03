@@ -19,12 +19,19 @@ const config: Config = {
         '128': '32rem',
         '144': '36rem',
         '160': '40rem',
+        '180': '45rem',
+        '192': '48rem',
+        '200': '50rem',
       },
       maxHeight: {
         '96': '24rem',
         '128': '32rem',
         '144': '36rem',
         '160': '40rem',
+        '180': '45rem',
+        '192': '48rem',
+        '200': '50rem',
+
       },
       keyframes: {
         marquee: {
