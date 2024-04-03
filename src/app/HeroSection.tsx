@@ -40,8 +40,8 @@ const HeroSection: NextPage<Props> = ({}) => {
                         type="video/mp4" 
                     /> 
                 </video>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                    <div className=" h-96 w-full p-6 backdrop-blur-3xl rounded-lg shadow">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-2">
+                    <div className=" w-full p-6 backdrop-blur-3xl rounded-lg shadow justify-items-center space-y-2" >
                         <a href="#">
                             <h5 className="mb-2 text-2xl font-bold tracking-tigh text-white">Subscribe to receive Kanari Network newsletter and get the latest news, updates, and insights</h5>
                         </a>
@@ -53,7 +53,7 @@ const HeroSection: NextPage<Props> = ({}) => {
                             </div>
                         </form>
 
-                        <div className="flex items-center">
+                        <div className="flex items-center ">
                             <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                             <label htmlFor="link-checkbox" className="ms-2 text-sm font-medium text-white dark:text-gray-900">I agree with the <a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
                         </div>
