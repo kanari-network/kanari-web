@@ -30,27 +30,25 @@ const HeroSection: NextPage<Props> = ({ }) => {
                     </div>
                 </div>
             </div>
-
-
             <div className="px-2">
                 <div className="relative">
                     <video autoPlay loop muted className="object-cover h-128 w-full rounded-md shadow">
                         <source src="https://tecdn.b-cdn.net/img/video/Lines.mp4" type="video/mp4" />
                     </video>
                     <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-                        <div className="bg-white bg-opacity-70 p-4 sm:p-6 rounded-lg shadow w-full max-w-xs sm:max-w-md md:max-w-lg" style={{ maxWidth: '800px' }}>
-                            <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-800">
+                        <div className="bg-white bg-opacity-70 p-4 sm:p-6 rounded-lg shadow w-full max-w-xs sm:max-w-md md:max-w-lgtext-center " style={{ maxWidth: '800px' }}>
+                            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
                                 Subscribe to Kanari Network Newsletter
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 text-center">
+                            <p className="text-sm sm:text-base text-gray-600">
                                 Get the latest news, updates, and insights delivered straight to your inbox.
                             </p>
-                            <form className="flex flex-col items-center space-y-2">
+                            <form className="flex flex-col items-center space-y-2 w-full">
                                 <div className="relative w-full flex items-center">
                                     <input
                                         type="email"
                                         id="Email"
-                                        className="w-full p-2 sm:p-3 pl-12 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                                        className="flex-grow p-2 sm:p-3 pl-16 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                                         placeholder="Enter your email"
                                         required
                                     />
@@ -62,7 +60,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     Subscribe
                                 </button>
                             </form>
-                            <div className="flex items-center mt-2">
+
+                            <div className="flex items-center justify-center mt-2">
                                 <input
                                     id="link-checkbox"
                                     type="checkbox"
