@@ -30,7 +30,73 @@ const HeroSection: NextPage<Props> = ({ }) => {
                     </div>
                 </div>
             </div>
-            <div className="px-2">
+
+
+            <div className="py-20 px-2 bg-gray-100">
+                <div className="max-w-7xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Kanari Network: Empowering the Future of Finance</h2>
+                    <p className="text-lg text-gray-600 mb-8">
+                        Kanari Network is a decentralized blockchain platform designed to revolutionize the way we interact with financial services. Our cutting-edge technology empowers developers to build secure, transparent, and efficient applications that benefit everyone.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white rounded-lg shadow-lg p-6">
+                            <img src="/icon1.svg" alt="Icon 1" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Decentralized Finance</h3>
+                            <p className="text-gray-600">
+                                Experience the power of DeFi with Kanari Network. Access a wide range of financial services without intermediaries, giving you full control over your assets.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-lg p-6">
+                            <img src="/icon2.svg" alt="Icon 2" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Smart Contracts</h3>
+                            <p className="text-gray-600">
+                                Build and deploy secure and automated smart contracts on Kanari Network. Our robust infrastructure ensures the integrity and reliability of your applications.
+                            </p>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-lg p-6">
+                            <img src="/icon3.svg" alt="Icon 3" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Community Driven</h3>
+                            <p className="text-gray-600">
+                                Join our vibrant community of developers, entrepreneurs, and enthusiasts. Collaborate, innovate, and shape the future of Kanari Network together.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="py-20 px-2 bg-white">
+                <div className="max-w-7xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Kanari Network: Empowering Investors</h2>
+                    <p className="text-lg text-gray-600 mb-8">
+                        Kanari Network provides unique opportunities for investors to be part of the decentralized future.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                            <img src="/icon4.svg" alt="Icon 4" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Early Adoption</h3>
+                            <p className="text-gray-600">
+                                Be an early investor in a rapidly growing ecosystem. Kanari Network is at the forefront of blockchain innovation, offering substantial growth potential.
+                            </p>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                            <img src="/icon5.svg" alt="Icon 5" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Tokenization</h3>
+                            <p className="text-gray-600">
+                                Explore new investment avenues with tokenized assets. Kanari Network facilitates fractional ownership and liquidity, opening doors to previously inaccessible markets.
+                            </p>
+                        </div>
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                            <img src="/icon6.svg" alt="Icon 6" className="mx-auto mb-4" />
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">Decentralized Governance</h3>
+                            <p className="text-gray-600">
+                                Participate in the governance of Kanari Network. As a token holder, you have a voice in shaping the future direction of the platform.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="px-2 py-20">
                 <div className="relative">
                     <video autoPlay loop muted className="object-cover h-128 w-full rounded-md shadow">
                         <source src="https://tecdn.b-cdn.net/img/video/Lines.mp4" type="video/mp4" />
@@ -80,8 +146,6 @@ const HeroSection: NextPage<Props> = ({ }) => {
                     </div>
                 </div>
             </div>
-
-
         </main>
 
 
