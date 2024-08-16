@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const [githubHover, setGithubHover] = useState(false);
 
   return (
-    <div className="pt-8 px-2 pb-2">
+    <div className="pt-2 px-2 pb-2">
       <footer className="bg-[#0d1b2e] rounded-md shadow">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
