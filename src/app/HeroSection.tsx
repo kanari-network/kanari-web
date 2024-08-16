@@ -1,4 +1,4 @@
-import { Navbar } from 'flowbite-react'
+
 import { NextPage } from 'next'
 import Navbar1 from './Navbar'
 
