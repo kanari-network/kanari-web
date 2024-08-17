@@ -44,7 +44,7 @@ export default function Navbar() {
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200">
           <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
-            <Link onClick={() => setNav(!nav)} href="/Learn">
+            <Link onClick={() => setNav(!nav)} href="/learn">
               Learn
             </Link>
           </li>
