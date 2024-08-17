@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://kanarinet.slack.com/" className="hover:underline">
                       Developer forum
                     </a>
                   </li>
@@ -68,16 +68,16 @@ const Footer: React.FC = () => {
                 <ul className="text-white dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
-                      Kanari Pay
+                      Kanari Pay soon
                     </a>
                   </li>
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
-                      AI
+                      AI soon
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://github.com/kanari-network/kanari-network" className="hover:underline">
                       Blockchain
                     </a>
                   </li>
