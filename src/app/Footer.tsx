@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://docs.kanari.network/" className="hover:underline">
                       Docs
                     </a>
                   </li>
