@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
                 <Image
-                  src="/iconkari.svg"
+                  src="/kariicon1.png"
                   className="h-8 mr-3"
                   alt="KanariLogo"
                   width={32}
