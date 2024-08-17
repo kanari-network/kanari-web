@@ -8,7 +8,7 @@ interface Props { }
 
 const HeroSection: NextPage<Props> = ({ }) => {
 
-    return <div className='bg-[#0b1521]'>
+    return <div className='bg-gradient-to-r from-orange-500 to-yellow-500'>
 
 
         <Navbar1 />
@@ -58,7 +58,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
             </section>
 
             {/* Features Section */}
-            <section className="py-20 px-4 bg-gray-100">
+            <section className="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200">
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800 mb-8">
                         Kanari Network: Empowering the Future of Finance
@@ -70,9 +70,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         transparent, and efficient applications that benefit everyone.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Decentralized Finance
@@ -83,9 +83,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 giving you full control over your assets.
                             </p>
                         </div>
-                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Smart Contracts
@@ -96,9 +96,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 reliability of your applications.
                             </p>
                         </div>
-                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Community Driven
@@ -112,9 +112,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                     </div>
                 </div>
             </section>
-
+            
             {/* Investors Section */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-20 px-4 bg-gradient-to-r from-white to-gray-100">
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-gray-800 mb-8">
                         Kanari Network: Empowering Investors
@@ -124,9 +124,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         part of the decentralized future.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Early Adoption
@@ -137,9 +137,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 offering substantial growth potential.
                             </p>
                         </div>
-                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Tokenization
@@ -150,9 +150,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 opening doors to previously inaccessible markets.
                             </p>
                         </div>
-                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105">
+                        <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto">
-
+                                {/* Icon can be added here */}
                             </div>
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Decentralized Governance
@@ -168,7 +168,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
             </section>
 
             {/* Newsletter Section */}
-            <section className="px-4 py-20 bg-gradient-to-r from-blue-500 to-purple-500">
+            <section className="px-4 py-20 bg-gradient-to-r from-orange-500 to-yellow-500">
                 <div className="max-w-4xl mx-auto rounded-lg shadow-lg p-6 sm:p-8 bg-white/10 backdrop-blur-md">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
                         Subscribe to Kanari Network Newsletter
@@ -208,7 +208,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 href="#"
                                 className="text-blue-300 hover:underline"
                             >
-                                terms and conditions
+                            terms and conditions
                             </a>
                             .
                         </label>
