@@ -42,13 +42,13 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         <div className="flex justify-center space-x-4">
                             <a
                                 href="#"
-                                className="bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
+                                className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
                             >
                                 Start Building
                             </a>
                             <a
                                 href="#"
-                                className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
+                                className="bg-white  text-black px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
                             >
                                 Learn More
                             </a>
@@ -187,7 +187,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         />
                         <button
                             type="submit"
-                            className="bg-white hover:bg-gray-100 text-blue-600 font-medium py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
+                            className="bg-white hover:bg-gray-100 text-black font-medium py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
                         >
                             Subscribe
                         </button>
@@ -197,7 +197,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             id="link-checkbox"
                             type="checkbox"
                             value=""
-                            className="w-4 h-4 text-blue-500 border-gray-400 rounded focus:ring-blue-500"
+                            className="w-4 h-4 text-black border-gray-400 rounded focus:ring-blue-500"
                         />
                         <label
                             htmlFor="link-checkbox"
