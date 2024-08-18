@@ -24,19 +24,21 @@ const HeroSection: NextPage<Props> = ({ }) => {
             <section className="py-10" />
             <main className="relative">
                 {/* Hero Section */}
-                <section className="relative">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        className="object-cover h-[500px] w-full"
-                    >
-                        <source
-                            src="/Lines.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black/50">
+                <section className="relative  overflow-hidden">
+                    <div className="parallax-bg"> {/* Add parallax class */}
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            className="object-cover h-[500px] w-full"
+                        >
+                            <source
+                                src="/Lines.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-600 to-yellow-500 dark:from-gray-800 dark:to-gray-900 opacity-80">
                         <div className="max-w-4xl text-center space-y-6">
                             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
                                 Build Smart Contracts with Ease
