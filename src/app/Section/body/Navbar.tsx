@@ -23,8 +23,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
   }, [darkMode]);
 
   return (
-    <nav className={`backdrop-blur-md bg-opacity-50 flex justify-between items-center w-full z-20 h-20 mx-auto px-6 py-4 fixed top-0 left-0 right-0 rounded-lg transition-all duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
-      <div className="flex items-center"> {/* Wrap logo and text in a flex container */}
+    <nav className={`m-6 backdrop-blur-md bg-opacity-50 flex justify-between items-center w-[calc(100%-40px)] z-20 h-20 mx-auto px-6 py-4 fixed top-0 left-0 right-0 rounded-lg transition-all duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>      <div className="flex items-center"> {/* Wrap logo and text in a flex container */}
         <Image
           src="/kariicon1.png" // Replace with the path to your logo image
           alt="Kanari Logo"
