@@ -40,7 +40,7 @@ export function VCSection() {
                                     className="object-cover w-full h-full"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition duration-300"></div>
-                                <span className="absolute bottom-4 left-4 text-white font-bold text-lg">
+                                <span className="absolute bottom-4 left-4 text-orange-200 dark:text-white font-bold text-lg">
                                     {vc.name}
                                 </span>
                             </button>
