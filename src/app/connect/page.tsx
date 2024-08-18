@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import Navbar from '../Section/body/Navbar';
+import Footer from '../Section/body/Footer';
 
 const Connect = () => {
   return (
