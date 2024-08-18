@@ -33,7 +33,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         />
         <h1 className="text-5xl font-signature ml-2">
           <Link
-            className={`link-underline ${darkMode ? 'link-underline-white' : 'link-underline-black'}`}
+            className={`link-underline ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
             href="/"
           >
             Kanari
