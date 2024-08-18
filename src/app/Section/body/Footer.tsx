@@ -4,13 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 const Footer: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false);
   const [discordHover, setDiscordHover] = useState(false);
   const [twitterHover, setTwitterHover] = useState(false);
   const [githubHover, setGithubHover] = useState(false);
 
   return (
     <div className="pt-4 px-4 pb-4">
-      <footer className="rounded-lg shadow-lg p-6 sm:p-8 bg-white/10 backdrop-blur-md">
+      <footer className={`rounded-lg shadow-lg p-6 sm:p-8 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white/10 text-black'} backdrop-blur-md`}>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             {/* Logo */}
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
                   width={32}
                   height={32}
                 />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+                <span className="self-center text-2xl font-semibold whitespace-nowrap">
                   Kanari Network
                 </span>
               </a>
@@ -33,10 +34,10 @@ const Footer: React.FC = () => {
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               {/* Resources */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">
+                <h2 className="mb-6 text-sm font-semibold">
                   Resources
                 </h2>
-                <ul className="text-white dark:text-gray-400 font-medium">
+                <ul className="font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       Developer portal
@@ -62,10 +63,10 @@ const Footer: React.FC = () => {
 
               {/* Solutions */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">
+                <h2 className="mb-6 text-sm font-semibold">
                   Solutions
                 </h2>
-                <ul className="text-white dark:text-gray-400 font-medium">
+                <ul className="font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       Kanari Pay soon
@@ -86,10 +87,10 @@ const Footer: React.FC = () => {
 
               {/* About */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white">
+                <h2 className="mb-6 text-sm font-semibold">
                   About
                 </h2>
-                <ul className="text-white dark:text-gray-400 font-medium">
+                <ul className="font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       Kanari Foundation
@@ -116,9 +117,9 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Copyright and Social */}
-          <hr className="my-6 border-gray-700 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-white sm:text-center dark:text-gray-400">
+            <span className="text-sm sm:text-center">
               © 2024{' '}
               <a href="#" className="hover:underline">
                 Kanari Network™
@@ -129,13 +130,12 @@ const Footer: React.FC = () => {
               {/* Discord */}
               <a
                 href="https://discord.gg/fv3j5zEKXX"
-                className="text-white hover:text-gray-900 dark:hover:text-white transform transition duration-300 ease-in-out"
+                className="transform transition duration-300 ease-in-out"
                 onMouseEnter={() => setDiscordHover(true)}
                 onMouseLeave={() => setDiscordHover(false)}
               >
                 <svg
-                  className={`w-5 h-5 ${discordHover ? 'transform scale-125' : ''
-                    }`}
+                  className={`w-5 h-5 ${discordHover ? 'transform scale-125' : ''}`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -150,13 +150,12 @@ const Footer: React.FC = () => {
               {/* Twitter */}
               <a
                 href="https://x.com/kanari_netwok"
-                className="text-white hover:text-gray-900 dark:hover:text-white transform transition duration-300 ease-in-out"
+                className="transform transition duration-300 ease-in-out"
                 onMouseEnter={() => setTwitterHover(true)}
                 onMouseLeave={() => setTwitterHover(false)}
               >
                 <svg
-                  className={`w-5 h-5 ${twitterHover ? 'transform scale-125' : ''
-                    }`}
+                  className={`w-5 h-5 ${twitterHover ? 'transform scale-125' : ''}`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -175,13 +174,12 @@ const Footer: React.FC = () => {
               {/* Github */}
               <a
                 href="https://github.com/kanari-network"
-                className="text-white hover:text-gray-900 dark:hover:text-white transform transition duration-300 ease-in-out"
+                className="transform transition duration-300 ease-in-out"
                 onMouseEnter={() => setGithubHover(true)}
                 onMouseLeave={() => setGithubHover(false)}
               >
                 <svg
-                  className={`w-5 h-5 ${githubHover ? 'transform scale-125' : ''
-                    }`}
+                  className={`w-5 h-5 ${githubHover ? 'transform scale-125' : ''}`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

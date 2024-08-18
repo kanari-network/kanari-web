@@ -1,13 +1,15 @@
-import React from 'react';
+'use client'; 
+import React, { useState } from 'react';
 import Navbar from '../Section/body/Navbar';
 import Footer from '../Section/body/Footer';
 
 const Build = () => {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <div className='bg-gradient-to-r from-orange-500 to-yellow-500'>
 
 
-      <Navbar />
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <section className="py-10" />
       sagsag
       <section className="py-10" />
