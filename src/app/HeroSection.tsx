@@ -21,16 +21,16 @@ const HeroSection: NextPage<Props> = ({ }) => {
         <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}>
 
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            <section className="py-10" />
+        
             <main className="relative">
                 {/* Hero Section */}
-                <section className="relative  overflow-hidden">
+                <section className="relative  overflow-hidden h-190">
                     <div className="parallax-bg"> {/* Add parallax class */}
                         <video
                             autoPlay
                             loop
                             muted
-                            className="object-cover h-[500px] w-full"
+                            className="object-cover h-[700px] w-full"
                         >
                             <source
                                 src="/Lines.mp4"
