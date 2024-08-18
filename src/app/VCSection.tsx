@@ -7,7 +7,32 @@ export function VCSection() {
     const vcs = [
         {
             name: "jamesatomc",
-            logo: "/kariicon1.png",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         // ... add more VCs with investment details
@@ -27,24 +52,26 @@ export function VCSection() {
                         Kanari Network is supported by a strong network of investors who
                         believe in our vision.
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 relative z-10">
+                    <div className="flex justify-center items-center">
+                      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 relative z-10">
                         {vcs.map((vc, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setSelectedVC(index)}
-                                className="flex flex-col items-center transform transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-105"
-                            >
-                                <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4 shadow-lg">
-                                    <img
-                                        src={vc.logo}
-                                        alt={vc.name}
-                                        className="object-cover w-full h-full"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300"></div>
-                                </div>
-                                <span className="text-gray-800 font-medium">{vc.name}</span>
-                            </button>
+                          <button
+                            key={index}
+                            onClick={() => setSelectedVC(index)}
+                            className="flex flex-col items-center transform transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-105"
+                          >
+                            <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4 shadow-lg">
+                              <img
+                                src={vc.logo}
+                                alt={vc.name}
+                                className="object-cover w-full h-full"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300"></div>
+                            </div>
+                            <span className="text-gray-800 font-medium">{vc.name}</span>
+                          </button>
                         ))}
+                      </div>
                     </div>
                 </div>
                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-100 to-transparent"></div>{' '}

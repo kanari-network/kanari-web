@@ -3,13 +3,20 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image"; // Import the Image component
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
 
   return (
     <nav className="backdrop-blur-3xl flex justify-between items-center top-0 left-0 w-full z-10 h-20 px-4 text-white fixed">
-      <div>
+      <div className="flex items-center"> {/* Wrap logo and text in a flex container */}
+        <Image 
+          src="/kariicon1.png" // Replace with the path to your logo image
+          alt="Kanari Logo" 
+          width={50} // Adjust width as needed
+          height={50} // Adjust height as needed
+        />
         <h1 className="text-5xl font-signature ml-2">
           <Link
             className="link-underline link-underline-black"

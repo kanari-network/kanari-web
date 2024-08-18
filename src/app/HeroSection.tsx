@@ -76,61 +76,62 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Feature Card 1 */}
-                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-2M9 7a2 2 0 012-2h2a2 2 0 012 2m-6 8a2 2 0 002 2h2a2 2 0 002-2" /></svg>
+                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform -rotate-12">
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-2M9 7a2 2 0 012-2h2a2 2 0 012 2m-6 8a2 2 0 002 2h2a2 2 0 002-2" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Decentralized Finance
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Experience the power of DeFi with Kanari Network. Access a
+                                        wide range of financial services without intermediaries,
+                                        giving you full control over your assets.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Decentralized Finance
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Experience the power of DeFi with Kanari Network. Access a
-                                    wide range of financial services without intermediaries,
-                                    giving you full control over your assets.
-                                </p>
-                                {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
 
-                            {/* Feature Card 2 */}
-                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                            {/* Feature Card 2 - Repeat similar structure */}
+                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform rotate-6">
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Smart Contracts
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Build and deploy secure and automated smart contracts on Kanari
+                                        Network. Our robust infrastructure ensures the integrity and
+                                        reliability of your applications.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Smart Contracts
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Build and deploy secure and automated smart contracts on Kanari
-                                    Network. Our robust infrastructure ensures the integrity and
-                                    reliability of your applications.
-                                </p>
-                                {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
 
-                            {/* Feature Card 3 */}
-                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75" /></svg>
+                            {/* Feature Card 3 - Repeat similar structure */}
+                            <div className="bg-white rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform -rotate-6">
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Community Driven
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Join our vibrant community of developers, entrepreneurs, and
+                                        enthusiasts. Collaborate, innovate, and shape the future of
+                                        Kanari Network together.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Community Driven
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Join our vibrant community of developers, entrepreneurs, and
-                                    enthusiasts. Collaborate, innovate, and shape the future of
-                                    Kanari Network together.
-                                </p>
-                                {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
                         </div>
                     </div>
                 </section>
+
 
                 {/* Investors Section */}
                 <section className="py-20 px-4 bg-gradient-to-r from-white to-gray-100">
@@ -144,61 +145,64 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Investor Card 1 */}
-                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10"> {/* Wrap content with relative positioning */}
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform -rotate-12"> {/* Add shadow and rotate icon */}
+                                        {/* Icon can be added here */}
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Early Adoption
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Be an early investor in a rapidly growing ecosystem. Kanari
+                                        Network is at the forefront of blockchain innovation,
+                                        offering substantial growth potential.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Early Adoption
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Be an early investor in a rapidly growing ecosystem. Kanari
-                                    Network is at the forefront of blockchain innovation,
-                                    offering substantial growth potential.
-                                </p>
                                 {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
 
-                            {/* Investor Card 2 */}
-                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 9a2 2 0 10-4 0v12" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9a2 2 0 10-4 0v12" /></svg>
+                            {/* Investor Card 2 - Repeat similar structure */}
+                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform rotate-6">
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 9a2 2 0 10-4 0v12" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9a2 2 0 10-4 0v12" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Tokenization
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Explore new investment avenues with tokenized assets. Kanari
+                                        Network facilitates fractional ownership and liquidity,
+                                        opening doors to previously inaccessible markets.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Tokenization
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Explore new investment avenues with tokenized assets. Kanari
-                                    Network facilitates fractional ownership and liquidity,
-                                    opening doors to previously inaccessible markets.
-                                </p>
-                                {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
 
-                            {/* Investor Card 3 */}
-                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group">
-                                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto z-10">
-                                    {/* Icon can be added here */}
-                                    <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.658 0-3 .895-3 2s1.342 2 3 2 3-.895 3-2-1.342-2-3-2zM3 12c0 4.411 3.589 8 8 8s8-3.589 8-8-3.589-8-8-8-8 3.589-8 8z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" /></svg>
+                            {/* Investor Card 3 - Repeat similar structure */}
+                            <div className="bg-gray-100 rounded-lg shadow-lg p-8 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl relative overflow-hidden group perspective-1000">
+                                <div className="relative z-10">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-4 mx-auto shadow-lg transform -rotate-6">
+                                        <svg className="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.658 0-3 .895-3 2s1.342 2 3 2 3-.895 3-2-1.342-2-3-2zM3 12c0 4.411 3.589 8 8 8s8-3.589 8-8-3.589-8-8-8-8 3.589-8 8z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" /></svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-800 mb-4">
+                                        Decentralized Governance
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        Participate in the governance of Kanari Network. As a token
+                                        holder, you have a voice in shaping the future direction of
+                                        the platform.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 z-10">
-                                    Decentralized Governance
-                                </h3>
-                                <p className="text-gray-600 z-10">
-                                    Participate in the governance of Kanari Network. As a token
-                                    holder, you have a voice in shaping the future direction of
-                                    the platform.
-                                </p>
-                                {/* Animated Shape */}
-                                <div className="absolute bottom-0 right-0 w-12 h-12 bg-blue-500 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out"></div>
+                                <div className="absolute bottom-0 right-0 w-48 h-48 bg-orange-300 transform -rotate-45 translate-x-1/2 group-hover:-translate-x-0 transition duration-500 ease-in-out shadow-2xl rounded-full"></div>
                             </div>
                         </div>
                     </div>
                 </section>
+
 
                 <VCSection />
 
