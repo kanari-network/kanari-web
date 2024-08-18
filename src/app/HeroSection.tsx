@@ -34,7 +34,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         className="object-cover h-[500px] w-full"
                     >
                         <source
-                            src="https://tecdn.b-cdn.net/img/video/Lines.mp4"
+                            src="/Lines.mp4"
                             type="video/mp4"
                         />
                     </video>
