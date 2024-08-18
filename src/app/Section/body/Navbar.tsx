@@ -9,25 +9,25 @@ import { FaMoon } from "react-icons/fa6";
 export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (darkMode: boolean) => void }) {
   const [nav, setNav] = useState(false);
 
-    // Load dark mode preference from localStorage on component mount
-    useEffect(() => {
-      const storedDarkMode = localStorage.getItem('darkMode');
-      if (storedDarkMode === 'true') {
-        setDarkMode(true);
-      }
-    }, []); // Empty dependency array ensures this runs only once on mount
-  
-    // Save dark mode preference to localStorage whenever it changes
-    useEffect(() => {
-      localStorage.setItem('darkMode', darkMode.toString());
-    }, [darkMode]);
+  // Load dark mode preference from localStorage on component mount
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode');
+    if (storedDarkMode === 'true') {
+      setDarkMode(true);
+    }
+  }, []); // Empty dependency array ensures this runs only once on mount
+
+  // Save dark mode preference to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode.toString());
+  }, [darkMode]);
 
   return (
     <nav className={`backdrop-blur-3xl flex justify-between items-center top-0 left-0 w-full z-10 h-20 px-4 fixed ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className="flex items-center"> {/* Wrap logo and text in a flex container */}
-        <Image 
+        <Image
           src="/kariicon1.png" // Replace with the path to your logo image
-          alt="Kanari Logo" 
+          alt="Kanari Logo"
           width={50} // Adjust width as needed
           height={50} // Adjust height as needed
         />
@@ -41,7 +41,8 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         </h1>
       </div>
 
-      <ul className="hidden md:flex">
+
+      <ul className="hidden md:flex justify-center items-center"> {/* Center the main links */}
         <li className={`nav-links px-4 cursor-pointer capitalize font-medium ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}>
           <Link href="/">Home</Link>
         </li>
@@ -54,8 +55,11 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         <li className={`nav-links px-4 cursor-pointer capitalize font-medium ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}>
           <Link href="/connect">Connect</Link>
         </li>
+      </ul>
+
+      {/* Keep Dark Mode Toggle separate */}
+      <ul className="hidden md:flex">
         <li className="nav-links px-4 cursor-pointer capitalize font-medium">
-          {/* Dark Mode Toggle */}
           <button onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
@@ -92,11 +96,11 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </Link>
           </li>
           <li className="nav-links px-4 cursor-pointer capitalize font-medium">
-          {/* Dark Mode Toggle */}
-          <button onClick={() => setDarkMode(!darkMode)}>
-            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-          </button>
-        </li>
+            {/* Dark Mode Toggle */}
+            <button onClick={() => setDarkMode(!darkMode)}>
+              {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+            </button>
+          </li>
         </ul>
       )}
     </nav>
