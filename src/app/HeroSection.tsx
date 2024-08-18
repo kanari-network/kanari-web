@@ -2,12 +2,15 @@
 import { NextPage } from 'next'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { VCSection } from './VCSection'
 
 
 interface Props { }
 
 
 const HeroSection: NextPage<Props> = ({ }) => {
+
+
 
     return (
 
@@ -196,6 +199,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         </div>
                     </div>
                 </section>
+
+                <VCSection />
 
                 {/* Newsletter Section */}
                 <section className="px-4 py-20 bg-gradient-to-r from-orange-500 to-yellow-500">
