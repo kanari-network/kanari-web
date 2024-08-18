@@ -3,16 +3,20 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-const Footer: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
+interface FooterProps {
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
   const [discordHover, setDiscordHover] = useState(false);
   const [twitterHover, setTwitterHover] = useState(false);
   const [githubHover, setGithubHover] = useState(false);
 
   return (
     <div className="pt-4 px-4 pb-4">
-      <footer className={`rounded-lg shadow-lg p-6 sm:p-8 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white/10 text-black'} backdrop-blur-md`}>
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <footer className={`rounded-lg shadow-lg p-6 sm:p-8 backdrop-blur-md  ${darkMode ? ' text-black bg-white' : 'bg-white/10 text-white'}`}>         
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             {/* Logo */}
             <div className="mb-6 md:mb-0">

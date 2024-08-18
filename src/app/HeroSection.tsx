@@ -214,7 +214,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
 
             </main>
-            <Footer />
+            <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
 
         </div>
     )

@@ -13,7 +13,7 @@ const Learn = () => {
       <section className="py-10">
         {/* Your content for the Learn page */}
       </section>
-      <Footer />
+      <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
     </div>
   );
 };
