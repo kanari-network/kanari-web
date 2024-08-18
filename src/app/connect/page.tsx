@@ -9,15 +9,11 @@ const Connect = () => {
   return (
 
     <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}>
-
-
-    <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <section className="py-10">
         {/* Your content for the Learn page */}
       </section>
-
-      <Footer /> 
+      <Footer />
     </div>
   );
 };

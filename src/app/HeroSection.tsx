@@ -20,14 +20,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
         <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}>
 
-
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
-
-
             <section className="py-10" />
-
-
             <main className="relative">
                 {/* Hero Section */}
                 <section className="relative">
@@ -218,7 +212,6 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
 
             </main>
-
             <Footer />
 
         </div>
