@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://drive.google.com/drive/folders/1cWm3pSEKFew0zhHU6OzTNzwSfnS5n4MR" className="hover:underline">
                       Media kit
                     </a>
                   </li>
