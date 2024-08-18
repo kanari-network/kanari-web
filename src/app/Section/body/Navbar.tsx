@@ -1,13 +1,26 @@
 'use client'
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaSun, FaTimes } from "react-icons/fa";
 import Image from "next/image"; // Import the Image component
 import { FaMoon } from "react-icons/fa6";
 
 export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (darkMode: boolean) => void }) {
   const [nav, setNav] = useState(false);
+
+    // Load dark mode preference from localStorage on component mount
+    useEffect(() => {
+      const storedDarkMode = localStorage.getItem('darkMode');
+      if (storedDarkMode === 'true') {
+        setDarkMode(true);
+      }
+    }, []); // Empty dependency array ensures this runs only once on mount
+  
+    // Save dark mode preference to localStorage whenever it changes
+    useEffect(() => {
+      localStorage.setItem('darkMode', darkMode.toString());
+    }, [darkMode]);
 
   return (
     <nav className={`backdrop-blur-3xl flex justify-between items-center top-0 left-0 w-full z-10 h-20 px-4 fixed ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
