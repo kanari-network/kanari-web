@@ -1,9 +1,11 @@
 
 import { NextPage } from 'next'
-import Navbar from './Navbar'
-import Footer from './Footer'
 import { VCSection } from './Section/VCSection'
 import { NewsletterSection } from './Section/NewsletterSection'
+import Navbar from './Section/body/Navbar'
+import Footer from './Section/body/Footer'
+
+
 
 
 interface Props { }
