@@ -78,6 +78,12 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
               Connect
             </Link>
           </li>
+          <li className="nav-links px-4 cursor-pointer capitalize font-medium">
+          {/* Dark Mode Toggle */}
+          <button onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+          </button>
+        </li>
         </ul>
       )}
     </nav>
