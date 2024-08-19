@@ -24,21 +24,21 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
 
   return (
     <nav className={`m-6 backdrop-blur-md bg-opacity-50 flex justify-between items-center w-[calc(100%-40px)] z-20 h-20 mx-auto px-6 py-4 fixed top-0 left-0 right-0 rounded-lg transition-all duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>      <div className="flex items-center"> {/* Wrap logo and text in a flex container */}
-        <Image
-          src="/kariicon1.png" // Replace with the path to your logo image
-          alt="Kanari Logo"
-          width={50} // Adjust width as needed
-          height={50} // Adjust height as needed
-        />
-        <h1 className="text-5xl font-signature ml-2">
-          <Link
-            className={`link-underline ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
-            href="/"
-          >
-            Kanari
-          </Link>
-        </h1>
-      </div>
+      <Image
+        src="/kariicon1.png" // Replace with the path to your logo image
+        alt="Kanari Logo"
+        width={50} // Adjust width as needed
+        height={50} // Adjust height as needed
+      />
+      <h1 className="text-5xl font-signature ml-2">
+        <Link
+          className={`link-underline ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
+          href="/"
+        >
+          Kanari
+        </Link>
+      </h1>
+    </div>
 
 
       <ul className="hidden md:flex justify-center items-center"> {/* Center the main links */}
@@ -73,7 +73,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
       </div>
 
       {nav && (
-        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200'}`}>
+        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen rounded-lg ${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200'}`}>
           <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
             <Link onClick={() => setNav(!nav)} href="/">
               Home
