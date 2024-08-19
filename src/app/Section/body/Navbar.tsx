@@ -52,10 +52,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         </li>
 
         {/* Repeat the same structure for "Learn", "Build", and "Connect" */}
-        <li className="nav-item relative group"
-          onMouseEnter={() => setLearnOpen(true)}
-          onMouseLeave={() => setLearnOpen(false)}
-        >
+        <li className="nav-item relative group" onMouseEnter={() => setLearnOpen(true)} onMouseLeave={() => setLearnOpen(false)}>
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium relative group ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
@@ -66,9 +63,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             Learn
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
-          <ul
-            className={`absolute top-full left-0 shadow-lg rounded-lg w-48 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform group-hover:translate-y-2 z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}
-          >
+          <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-48 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform group-hover:translate-y-2 z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
             <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>
               <Link href="/learn/basics" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
             </li>
@@ -82,10 +77,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         </li>
 
         {/* Repeat the same structure for "Build" and "Connect" */}
-        <li className="nav-item relative group"
-          onMouseEnter={() => setBuildOpen(true)}
-          onMouseLeave={() => setBuildOpen(false)}
-        >
+        <li className="nav-item relative group" onMouseEnter={() => setBuildOpen(true)} onMouseLeave={() => setBuildOpen(false)}>
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium relative group ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
@@ -110,10 +102,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         </li>
 
 
-        <li className="nav-item relative group"
-          onMouseEnter={() => setConnectOpen(true)}
-          onMouseLeave={() => setConnectOpen(false)}
-        >
+        <li className="nav-item relative group" onMouseEnter={() => setConnectOpen(true)} onMouseLeave={() => setConnectOpen(false)}>
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
@@ -136,6 +125,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </li>
           </ul>
         </li>
+
       </ul>
 
       {/* Keep Dark Mode Toggle separate */}
