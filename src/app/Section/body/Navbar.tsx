@@ -74,6 +74,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </li>
           </ul>
         </li>
+        
         <li className="nav-item relative group" onMouseEnter={() => setBuildOpen(true)} onMouseLeave={() => setBuildOpen(false)}>
           <Link
             href=""
@@ -97,6 +98,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </li>
           </ul>
         </li>
+
         <li className="nav-item relative group" onMouseEnter={() => setConnectOpen(true)} onMouseLeave={() => setConnectOpen(false)}>
           <Link
             href=""
