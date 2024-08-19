@@ -73,28 +73,28 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
       </div>
 
       {nav && (
-        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-160 rounded-lg ${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200'}`}>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-160 rounded-lg ${darkMode ? 'bg-gray-900 text-white shadow-2xl transform transition duration-500 ease-in-out translate-x-0 opacity-100' : 'bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200 shadow-2xl transform transition duration-500 ease-in-out -translate-x-full opacity-0'} ${nav ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+          <li className="px-4 cursor-pointer capitalize py-6 text-4xl transform transition duration-300 ease-in-out hover:scale-110">
             <Link onClick={() => setNav(!nav)} href="/">
               Home
             </Link>
           </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+          <li className="px-4 cursor-pointer capitalize py-6 text-4xl transform transition duration-300 ease-in-out hover:scale-110">
             <Link onClick={() => setNav(!nav)} href="/learn">
               Learn
             </Link>
           </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+          <li className="px-4 cursor-pointer capitalize py-6 text-4xl transform transition duration-300 ease-in-out hover:scale-110">
             <Link onClick={() => setNav(!nav)} href="/build">
               Build
             </Link>
           </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+          <li className="px-4 cursor-pointer capitalize py-6 text-4xl transform transition duration-300 ease-in-out hover:scale-110">
             <Link onClick={() => setNav(!nav)} href="/connect">
               Connect
             </Link>
           </li>
-          <li className="nav-links px-4 cursor-pointer capitalize font-medium">
+          <li className="nav-links px-4 cursor-pointer capitalize font-medium py-6 transform transition duration-300 ease-in-out hover:scale-110">
             {/* Dark Mode Toggle */}
             <button onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
