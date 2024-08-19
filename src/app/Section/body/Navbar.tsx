@@ -51,15 +51,24 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
         </li>
 
         {/* Repeat the same structure for "Learn", "Build", and "Connect" */}
-        <li className="nav-item relative group" onMouseEnter={() => setLearnOpen(true)} onMouseLeave={() => setLearnOpen(false)}>
+        <li className="nav-item relative group"
+          onMouseEnter={() => setLearnOpen(true)}
+          onMouseLeave={() => setLearnOpen(false)}
+        >
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium relative group ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
             onClick={(e) => {
               e.preventDefault();
+              // Toggle dropdown on click for desktop
+              setLearnOpen(!learnOpen);
             }}
           >
             Learn
+            {/* Optional: Add a dropdown icon */}
+            <svg className={`inline-block ml-2 transform transition duration-200 ${learnOpen ? 'rotate-180' : ''}`} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L10.2929 4.70711C10.6834 4.31658 10.6834 3.68342 10.2929 3.29289L9.70711 2.70711C9.31658 2.31658 8.68342 2.31658 8.29289 2.70711L6 5.00001L3.70711 2.70711C3.31658 2.31658 2.68342 2.31658 2.29289 2.70711L1.70711 3.29289C1.31658 3.68342 1.31658 4.31658 1.70711 4.70711L6 9Z" fill="currentColor" />
+            </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
           <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-48 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform group-hover:translate-y-2 z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
@@ -74,16 +83,25 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </li>
           </ul>
         </li>
-        
-        <li className="nav-item relative group" onMouseEnter={() => setBuildOpen(true)} onMouseLeave={() => setBuildOpen(false)}>
+
+        <li className="nav-item relative group"
+          onMouseEnter={() => setBuildOpen(true)}
+          onMouseLeave={() => setBuildOpen(false)}
+        >
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium relative group ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
             onClick={(e) => {
               e.preventDefault();
+              // Toggle dropdown on click for desktop
+              setBuildOpen(!buildOpen);
             }}
           >
             Build
+            {/* Optional: Add a dropdown icon */}
+            <svg className={`inline-block ml-2 transform transition duration-200 ${buildOpen ? 'rotate-180' : ''}`} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L10.2929 4.70711C10.6834 4.31658 10.6834 3.68342 10.2929 3.29289L9.70711 2.70711C9.31658 2.31658 8.68342 2.31658 8.29289 2.70711L6 5.00001L3.70711 2.70711C3.31658 2.31658 2.68342 2.31658 2.29289 2.70711L1.70711 3.29289C1.31658 3.68342 1.31658 4.31658 1.70711 4.70711L6 9Z" fill="currentColor" />
+            </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
           <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-48 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform group-hover:translate-y-2 z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
@@ -99,15 +117,25 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
           </ul>
         </li>
 
-        <li className="nav-item relative group" onMouseEnter={() => setConnectOpen(true)} onMouseLeave={() => setConnectOpen(false)}>
+
+        <li className="nav-item relative group"
+          onMouseEnter={() => setConnectOpen(true)}
+          onMouseLeave={() => setConnectOpen(false)}
+        >
           <Link
             href=""
             className={`nav-links px-4 cursor-pointer capitalize font-medium ${darkMode ? 'text-orange-200 hover:text-white' : 'text-orange-500 hover:text-black'} hover:scale-105 duration-200 link-underline`}
             onClick={(e) => {
               e.preventDefault();
+              // Toggle dropdown on click for desktop
+              setConnectOpen(!connectOpen);
             }}
           >
             Connect
+            {/* Optional: Add a dropdown icon */}
+            <svg className={`inline-block ml-2 transform transition duration-200 ${connectOpen ? 'rotate-180' : ''}`} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L10.2929 4.70711C10.6834 4.31658 10.6834 3.68342 10.2929 3.29289L9.70711 2.70711C9.31658 2.31658 8.68342 2.31658 8.29289 2.70711L6 5.00001L3.70711 2.70711C3.31658 2.31658 2.68342 2.31658 2.29289 2.70711L1.70711 3.29289C1.31658 3.68342 1.31658 4.31658 1.70711 4.70711L6 9Z" fill="currentColor" />
+            </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
           <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-48 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform group-hover:translate-y-2 z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
@@ -122,6 +150,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </li>
           </ul>
         </li>
+
 
       </ul>
 
