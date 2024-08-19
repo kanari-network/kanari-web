@@ -134,7 +134,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
 
       <div
         onClick={() => setNav(!nav)}
-        className={`cursor-pointer pr-4 z-10 ${darkMode ? 'text-white' : 'text-black'} md:hidden`}
+        className={`cursor-pointer pr-4 z-10 ${darkMode ? 'text-white' : 'text-white'} md:hidden`}
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
