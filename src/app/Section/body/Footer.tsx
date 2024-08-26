@@ -128,7 +128,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
               <a href="#" className="hover:underline">
                 Kanari Network™
               </a>
-              . All Rights Reserved.
+              . community.
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-6">
               {/* Discord */}
