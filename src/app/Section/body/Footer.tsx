@@ -111,7 +111,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="https://blog.kanari.network/" className="hover:underline">
                       Blog
                     </a>
                   </li>
