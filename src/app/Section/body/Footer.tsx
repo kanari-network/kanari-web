@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 </h2>
                 <ul className="font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="https://github.com/jamesatomc/walletkari" className="hover:underline">
                       Kanari Pay soon
                     </a>
                   </li>
