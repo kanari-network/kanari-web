@@ -133,7 +133,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
             <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-6">
               {/* Discord */}
               <a
-                href="https://discord.gg/fv3j5zEKXX"
+                href="https://discord.gg/QU6fTacXab"
                 className="transform transition duration-300 ease-in-out"
                 onMouseEnter={() => setDiscordHover(true)}
                 onMouseLeave={() => setDiscordHover(false)}
