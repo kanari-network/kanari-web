@@ -57,11 +57,11 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                       Whitepaper
                     </a>
                   </li>
-                  <li className="mb-4">
+{/*                   <li className="mb-4">
                     <a href="https://kanarinet.slack.com/" className="hover:underline">
                       Developer forum
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
