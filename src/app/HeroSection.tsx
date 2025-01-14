@@ -64,7 +64,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 </section>
 
                 {/* Features Section */}
-                <section className="py-20 px- bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
+                <section className="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-8"> {/* Added dark:text-white */}
                             Kanari Network: Empowering the Future of Finance
