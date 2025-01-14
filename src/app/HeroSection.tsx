@@ -7,39 +7,33 @@ import Footer from './Section/body/Footer'
 import { useState } from 'react'
 import { OfficialChannels } from './Section/OfficialChannels';
 
-
-
-
 interface Props { }
-
 
 const HeroSection: NextPage<Props> = ({ }) => {
     const [darkMode, setDarkMode] = useState(false);
-
 
     return (
 
         <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}>
 
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        
+
             <main className="relative">
                 {/* Hero Section */}
-                <section className="relative  overflow-hidden h-190">
-                    <div className="parallax-bg"> {/* Add parallax class */}
+                <section className="pt-24 py-4 px-4 relative overflow-hidden h-190 ">
+
+                    {/* Parallax Background */}
+                    <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-white/10">
                         <video
                             autoPlay
                             loop
                             muted
                             className="object-cover h-[700px] w-full"
                         >
-                            <source
-                                src="/Lines.mp4"
-                                type="video/mp4"
-                            />
+                            <source src="/Lines.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-600 to-yellow-500 dark:from-gray-800 dark:to-gray-900 opacity-80">
+                    <div className="absolute top-0 left-0 px-4 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-600 to-yellow-500 dark:from-gray-800 dark:to-gray-900 opacity-80">
                         <div className="max-w-4xl text-center space-y-6">
                             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
                                 Build Smart Contracts with Ease
@@ -64,6 +58,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             </div>
                         </div>
                     </div>
+
                 </section>
 
                 {/* Features Section */}
@@ -104,7 +99,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         <svg className="h-6 w-6 text-blue-500 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4"> {/* Added dark:text-white */}
-                                        Smart Contracts 
+                                        Smart Contracts
                                     </h3>
                                     <p className="text-gray-600 dark:text-gray-300"> {/* Added dark:text-gray-300 */}
                                         Build and deploy secure and automated smart contracts on Kanari
