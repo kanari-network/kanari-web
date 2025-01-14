@@ -251,19 +251,22 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 </section>
 
 
-                {/* VC Section */}
-                <VCSection />
 
+                
+                <section className=" bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}          
+                    {/* VC Section */}
+                    <VCSection />
 
-                {/* Latest Updates  Section */}
-                <LatestUpdates />
+                    {/* Latest Updates  Section */}
+                    <LatestUpdates />
 
+                    {/* Official Channels */}
+                    <OfficialChannels />
 
-                {/* Official Channels */}
-                <OfficialChannels />
+                    {/* Newsletter Section */}
+                    <NewsletterSection />
 
-                {/* Newsletter Section */}
-                <NewsletterSection />
+                </section>
 
 
             </main>

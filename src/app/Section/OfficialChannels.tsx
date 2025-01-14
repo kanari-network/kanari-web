@@ -41,8 +41,7 @@ export function OfficialChannels() {
     ];
 
     return (
-        <section className="py-20 px-4 bg-gradient-to-br from-gray-50 via-gray-100 to-white 
-        dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <section className="py-20 px-4 ">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 
                 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 

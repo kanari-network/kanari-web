@@ -68,8 +68,7 @@ export function VCSection() {
     return (
         <>
             {/* VC Section */}
-            <section className="py-20 px-4 bg-gradient-to-br from-gray-50 via-gray-100 to-white 
-            dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative">
+            <section className="py-20 px-4 ">
                 <div className="w-full mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r 
                     from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 
