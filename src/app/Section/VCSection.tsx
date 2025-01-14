@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function VCSection() {
     // Sample VC and Investor data (replace with your actual data)
@@ -10,45 +10,132 @@ export function VCSection() {
             logo: "/jamesatomc.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
+        {
+            name: "jamesatomc",
+            logo: "/jamesatomc.png",
+            investmentDetails: "Invested $1 million in Series A funding.",
+        },
         // ... add more VCs with investment details
     ];
 
     const [selectedVC, setSelectedVC] = useState<number | null>(null);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    // Auto scroll effect
+    useEffect(() => {
+        if (!isPaused) {
+            const interval = setInterval(() => {
+                if (scrollContainerRef.current) {
+                    const isAtEnd = scrollContainerRef.current.scrollLeft + scrollContainerRef.current.offsetWidth >=
+                        scrollContainerRef.current.scrollWidth;
+
+                    if (isAtEnd) {
+                        scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        scrollContainerRef.current.scrollBy({ left: 1, behavior: 'smooth' });
+                    }
+                }
+            }, 30); // Adjust speed here
+
+            return () => clearInterval(interval);
+        }
+    }, [isPaused]);
+
+    // Duplicate VCs array for infinite scroll effect
+    const duplicatedVcs = [...vcs, ...vcs];
 
     return (
         <>
             {/* VC Section */}
             <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900 relative">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6 text-center">
                         Backed by Leading Investors
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-10">
+                    <p className="text-gray-600 dark:text-gray-300 mb-10 text-center">
                         Kanari Network is supported by a strong network of investors who believe in our vision.
                     </p>
-                    <div className="flex flex-wrap justify-center">
-                        {vcs.map((vc, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setSelectedVC(index)}
-                                className="relative w-40 h-48 m-4 rounded-lg overflow-hidden shadow-lg 
-                                           transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
+
+                    <div className="relative">
+                        {/* Gradient Masks */}
+                        <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+                        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+
+                        <div className="relative overflow-hidden">
+                            {/* Gradient Masks */}
+                            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+                            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+
+                            {/* Scrollable Container */}
+                            <div
+                                ref={scrollContainerRef}
+                                className="flex overflow-x-auto scrollbar-hide gap-6 px-10 py-4"
+                                onMouseEnter={() => setIsPaused(true)}
+                                onMouseLeave={() => setIsPaused(false)}
+                                style={{
+                                    scrollbarWidth: 'none',
+                                    msOverflowStyle: 'none',
+                                    scrollBehavior: 'smooth'
+                                }}
                             >
-                                <img
-                                    src={vc.logo}
-                                    alt={vc.name}
-                                    className="object-cover w-full h-full"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition duration-300"></div>
-                                <span className="absolute bottom-4 left-4 text-orange-200 dark:text-white font-bold text-lg">
-                                    {vc.name}
-                                </span>
-                            </button>
-                        ))}
+                                {duplicatedVcs.map((vc, index) => (
+                                    <button
+                                        key={`${index}-${vc.name}`}
+                                        onClick={() => setSelectedVC(index % vcs.length)}
+                                        className="flex-none w-[280px] h-[320px] rounded-xl overflow-hidden shadow-lg 
+                                                 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
+                                    >
+                                        <div className="relative w-full h-full bg-gray-100 dark:bg-gray-800">
+                                            {/* Image with fallback */}
+                                            <img
+                                                src={vc.logo}
+                                                alt={vc.name}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    e.currentTarget.src = '/placeholder.png';
+                                                }}
+                                            />
+                                            
+                                            {/* Gradient Overlay */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                                            
+                                            {/* Content */}
+                                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                                                <h3 className="text-white font-bold text-xl mb-2">{vc.name}</h3>
+                                                <p className="text-gray-200 text-sm truncate">
+                                                    {vc.investmentDetails}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
-
             {/* Modal/Popup for VC Details */}
             {selectedVC !== null && (
                 <div

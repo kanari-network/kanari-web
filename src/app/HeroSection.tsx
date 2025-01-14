@@ -5,6 +5,7 @@ import { NewsletterSection } from './Section/NewsletterSection'
 import Navbar from './Section/body/Navbar'
 import Footer from './Section/body/Footer'
 import { useState } from 'react'
+import { OfficialChannels } from './Section/OfficialChannels';
 
 
 
@@ -103,7 +104,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         <svg className="h-6 w-6 text-blue-500 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4"> {/* Added dark:text-white */}
-                                        Smart Contracts
+                                        Smart Contracts 
                                     </h3>
                                     <p className="text-gray-600 dark:text-gray-300"> {/* Added dark:text-gray-300 */}
                                         Build and deploy secure and automated smart contracts on Kanari
@@ -207,7 +208,12 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
 
                 {/* VC Section */}
-{/*                 <VCSection /> */}
+                <VCSection />
+
+                {/* Official Channels */}
+                <OfficialChannels />
+
+
 
                 {/* Newsletter Section */}
                 <NewsletterSection />
