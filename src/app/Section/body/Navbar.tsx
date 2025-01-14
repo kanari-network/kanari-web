@@ -84,14 +84,14 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
                 <Link href="/learn/tutorials" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
               </li>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            {/* <div className="grid grid-cols-3 gap-4">
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/basics" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
               </li>
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/advanced" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
               </li>
-            </div>
+            </div> */}
           </ul>
         </li>
 
@@ -153,12 +153,12 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
               <Link href="/connect/community" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Community</Link>
             </li>
-            <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+            {/* <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
               <Link href="/connect/events" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Events</Link>
             </li>
             <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
               <Link href="/connect/contact" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Contact Us</Link>
-            </li>
+            </li> */}
           </ul>
         </li>
 
@@ -215,12 +215,12 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/learn/tutorials" className="block px-2 py-1 text-gray-800 dark:text-white">Tutorials</Link>
                 </li>
-                <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
+                {/* <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/learn/basics" className="block px-2 py-1 text-gray-800 dark:text-white">Basics</Link>
                 </li>
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/learn/advanced" className="block px-2 py-1 text-gray-800 dark:text-white">Advanced</Link>
-                </li>
+                </li> */}
               </ul>
             )}
           </li>
@@ -275,12 +275,12 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/connect/community" className="block px-2 py-1 text-gray-800 dark:text-white">Community</Link>
                 </li>
-                <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
+                {/* <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/connect/events" className="block px-2 py-1 text-gray-800 dark:text-white">Events</Link>
                 </li>
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/connect/contact" className="block px-2 py-1 text-gray-800 dark:text-white">Contact Us</Link>
-                </li>
+                </li> */}
               </ul>
             )}
           </li>
