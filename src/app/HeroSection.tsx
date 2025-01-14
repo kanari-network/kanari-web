@@ -6,6 +6,8 @@ import Navbar from './Section/body/Navbar'
 import Footer from './Section/body/Footer'
 import { useState } from 'react'
 import { OfficialChannels } from './Section/OfficialChannels';
+import LatestUpdates from './Section/LatestUpdates';
+
 
 interface Props { }
 
@@ -33,7 +35,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             <source src="/Lines.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <div className="absolute top-0 left-0 px-4 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-yellow-400 dark:from-gray-800 dark:to-gray-900 opacity-90">
+                    <div className="absolute top-0 left-0 px-4 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-yellow-500 dark:from-gray-800 dark:to-gray-900 opacity-90">
                         <div className="max-w-4xl text-center space-y-6">
                             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
                                 Build Smart Contracts with Ease
@@ -207,10 +209,13 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 {/* VC Section */}
                 <VCSection />
 
+
+                {/* Latest Updates  Section */}
+                <LatestUpdates />
+
+
                 {/* Official Channels */}
                 <OfficialChannels />
-
-
 
                 {/* Newsletter Section */}
                 <NewsletterSection />

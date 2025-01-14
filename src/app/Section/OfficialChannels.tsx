@@ -36,7 +36,7 @@ export function OfficialChannels() {
                 </svg>
             ),
             link: "https://github.com/kanari-network",
-            color: "bg-gray-800"
+            color: "bg-gray-700"
         }
     ];
 
