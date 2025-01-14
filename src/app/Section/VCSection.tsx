@@ -68,12 +68,17 @@ export function VCSection() {
     return (
         <>
             {/* VC Section */}
-            <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900 relative">
+            <section className="py-20 px-4 bg-gradient-to-br from-gray-50 via-gray-100 to-white 
+            dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6 text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r 
+                    from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 
+                    dark:to-purple-200 bg-clip-text text-transparent">
                         Backed by Leading Investors
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-10 text-center">
+                    
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 text-center 
+                    max-w-3xl mx-auto leading-relaxed">
                         Kanari Network is supported by a strong network of investors who believe in our vision.
                     </p>
 

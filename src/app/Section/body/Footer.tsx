@@ -15,74 +15,76 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
 
   return (
     <div className="pt-4 px-4 pb-4">
-      <footer className={`rounded-lg shadow-lg p-6 sm:p-8 backdrop-blur-md  ${darkMode ? ' text-black bg-white' : 'bg-white/10 text-white'}`}>         
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <footer className={`backdrop-blur-sm ${darkMode ? 'bg-white/90 text-gray-800 border border-gray-200/50' : 'bg-white/10 text-white border border-white/20'} 
+        rounded-2xl shadow-xl p-8 sm:p-10 transition-all duration-300`}>
+        <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             {/* Logo */}
-            <div className="mb-6 md:mb-0">
+            <div className="mb-8 md:mb-0 group">
               <a href="#" className="flex items-center">
                 <Image
                   src="/kariicon1.png"
-                  className="h-8 mr-3"
+                  className="h-10 w-10 mr-3 transform group-hover:rotate-6 transition-transform"
                   alt="KanariLogo"
-                  width={32}
-                  height={32}
+                  width={40}
+                  height={40}
                 />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap">
+                <span className="text-2xl font-bold bg-gradient-to-r from-current to-current/70 
+                    bg-clip-text hover:text-transparent transition-all duration-300">
                   Kanari Network
                 </span>
               </a>
             </div>
 
             {/* Links */}
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-12 sm:gap-16 sm:grid-cols-3">
               {/* Resources */}
-              <div>
-                <h2 className="mb-6 text-sm font-semibold">
+              <div className="space-y-6">
+                <h2 className="text-sm font-bold uppercase tracking-wider">
                   Resources
                 </h2>
-                <ul className="font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                <ul className="space-y-4">
+                  <li>
+                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Developer portal
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://docs.kanari.network/" className="hover:underline">
+                    <a href="https://docs.kanari.network/" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Docs
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Whitepaper
                     </a>
                   </li>
-{/*                   <li className="mb-4">
-                    <a href="https://kanarinet.slack.com/" className="hover:underline">
+                  <li className="mb-4">
+                    <a href="https://kanarinet.slack.com/" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Developer forum
                     </a>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
 
               {/* Solutions */}
-              <div>
-                <h2 className="mb-6 text-sm font-semibold">
+              <div className="space-y-6">
+                <h2 className="text-sm font-bold uppercase tracking-wider">
                   Solutions
                 </h2>
                 <ul className="font-medium">
                   <li className="mb-4">
-                    <a href="https://github.com/jamesatomc/walletkari" className="hover:underline">
+                    <a href="https://github.com/jamesatomc/walletkari" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Pay soon
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       AI soon
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://github.com/kanari-network/kanari-network" className="hover:underline">
+                    <a href="https://github.com/kanari-network/kanari-network" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Blockchain
                     </a>
                   </li>
@@ -90,28 +92,28 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
               </div>
 
               {/* About */}
-              <div>
-                <h2 className="mb-6 text-sm font-semibold">
+              <div className="space-y-6">
+                <h2 className="text-sm font-bold uppercase tracking-wider">
                   About
                 </h2>
                 <ul className="font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Foundation
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://drive.google.com/drive/folders/1cWm3pSEKFew0zhHU6OzTNzwSfnS5n4MR" className="hover:underline">
+                    <a href="https://drive.google.com/drive/folders/1cWm3pSEKFew0zhHU6OzTNzwSfnS5n4MR" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Media kit
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Team
                     </a>
                   </li>
                   <li>
-                    <a href="https://blog.kanari.network/" className="hover:underline">
+                    <a href="https://blog.kanari.network/" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Blog
                     </a>
                   </li>
@@ -139,7 +141,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 onMouseEnter={() => setBlueskyHover(true)}
                 onMouseLeave={() => setBlueskyHover(false)}
               >
-                <img 
+                <img
                   src="/Bluesky_Logo.svg"
                   alt="Bluesky Logo"
                   className={`w-5 h-5 ${blueskyHover ? 'transform scale-125' : ''} dark:invert`}
@@ -190,7 +192,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 </svg>
                 <span className="sr-only">GitHub account</span>
               </a>
-              
+
             </div>
           </div>
         </div>
