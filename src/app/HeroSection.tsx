@@ -20,7 +20,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
             <main className="relative">
                 {/* Hero Section */}
-                <section className="pt-24 py-4 px-4 relative overflow-hidden h-190 ">
+                <section className="pt-24 py-2 px-2 relative overflow-hidden h-190 ">
 
                     {/* Parallax Background */}
                     <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-white/10">
@@ -33,7 +33,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             <source src="/Lines.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <div className="absolute top-0 left-0 px-4 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-600 to-yellow-500 dark:from-gray-800 dark:to-gray-900 opacity-80">
+                    <div className="absolute top-0 left-0 px-4 w-full h-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-yellow-400 dark:from-gray-800 dark:to-gray-900 opacity-90">
                         <div className="max-w-4xl text-center space-y-6">
                             <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
                                 Build Smart Contracts with Ease
@@ -45,13 +45,15 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             <div className="flex justify-center space-x-4">
                                 <a
                                     href="#"
-                                    className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
+                                    className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium 
+                                    transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
                                 >
                                     Start Building
                                 </a>
                                 <a
                                     href="#"
-                                    className="bg-white  text-black px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out transform hover:scale-105"
+                                    className="bg-white text-black px-6 py-3 rounded-full font-medium 
+                                    transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
                                 >
                                     Learn More
                                 </a>
@@ -62,7 +64,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 </section>
 
                 {/* Features Section */}
-                <section className="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
+                <section className="py-20 px- bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
                     <div className="max-w-7xl mx-auto text-center">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-8"> {/* Added dark:text-white */}
                             Kanari Network: Empowering the Future of Finance
