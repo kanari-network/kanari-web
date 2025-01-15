@@ -32,32 +32,39 @@ function LatestUpdates() {
 
     const blogupdates = [
         {
-            title: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            image: '/jamesatomc.jpg',
+            title: '#01',
+            image: 'https://raw.githubusercontent.com/kanari-network/about/main/kari1.png',
             Url: 'https://blog.kanari.network/Kanari_SDK_Design',
-            description: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            data: '27-01-2022'
+            description: 'KANARI SDK Design: A New Era for Blockchain Interoperability and Digital Asset Security',
+            data: '27-01-2024'
         },
         {
-            title: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            image: '/jamesatomc.jpg',
+            title: '#02',
+            image: 'https://raw.githubusercontent.com/kanari-network/about/main/kari1.png',
             Url: 'https://blog.kanari.network/Kanari_SDK_Design',
-            description: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            data: '27-01-2022'
+            description: 'KANARI SDK Design: A New Era for Blockchain Interoperability and Digital Asset Security',
+            data: '27-01-2024'
         },
         {
-            title: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            image: '/jamesatomc.jpg',
+            title: '#03',
+            image: 'https://raw.githubusercontent.com/kanari-network/about/main/kari1.png',
             Url: 'https://blog.kanari.network/Kanari_SDK_Design',
-            description: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            data: '27-01-2022'
+            description: 'KANARI SDK Design: A New Era for Blockchain Interoperability and Digital Asset Security',
+            data: '27-01-2024'
         },
         {
-            title: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            image: '/jamesatomc.jpg',
+            title: '#04',
+            image: 'https://raw.githubusercontent.com/kanari-network/about/main/kari1.png',
             Url: 'https://blog.kanari.network/Kanari_SDK_Design',
-            description: 'Ika\'s Launch on Sui: A New Era for Blockchain Interoperability and Digital Asset Security',
-            data: '27-01-2022'
+            description: 'KANARI SDK Design: A New Era for Blockchain Interoperability and Digital Asset Security',
+            data: '27-01-2024'
+        },
+        {
+            title: '#04',
+            image: 'https://raw.githubusercontent.com/kanari-network/about/main/kari1.png',
+            Url: 'https://blog.kanari.network/Kanari_SDK_Design',
+            description: 'KANARI SDK Design: A New Era for Blockchain Interoperability and Digital Asset Security',
+            data: '27-01-2024'
         },
     ];
 
@@ -102,10 +109,13 @@ function LatestUpdates() {
                                 border border-gray-200/50 dark:border-gray-700/50 rounded-xl overflow-hidden 
                                 hover:scale-105 transition-all duration-300 group"
                             >
-                                <div className="aspect-w-16 aspect-h-9">
-                                    <img src={blog.image} alt={blog.title}
+                                <div className="aspect-w-16 aspect-h-9 bg-black relative">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+                                    <img 
+                                        src={blog.image} 
+                                        alt={blog.title}
                                         className="w-full h-48 object-cover transform group-hover:scale-105 
-                                        transition-transform duration-500"
+                                        transition-transform duration-500 opacity-90 hover:opacity-100"
                                     />
                                 </div>
                                 <div className="p-6">
