@@ -41,8 +41,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 <section className="pt-24 py-2 px-2 relative overflow-hidden h-190 ">
 
                     {/* Parallax Background */}
-                    <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-white/10 
-                    relative group">
+                    <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-white/10 relative group">
                         <video
                             autoPlay
                             loop
@@ -66,7 +65,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                   font-bold
                                   leading-tight 
                                   tracking-tight 
-                                  animate-fade-in
+                                  animate-slide-up
+                                  opacity-0
                                   mx-auto
                                 ">
                                     Build Smart Contracts
@@ -78,6 +78,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     bg-gradient-to-r 
                                     from-white to-orange-200 
                                     dark:from-white dark:to-gray-400
+                                    animate-slide-up
+                                    opacity-0
+                                    [animation-delay:0.2s]
                                   ">
                                         with Ease
                                     </span>
@@ -91,6 +94,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                   max-w-3xl
                                   mx-auto
                                   leading-relaxed
+                                  animate-slide-up
+                                  opacity-0
+                                  [animation-delay:0.4s]
                                 ">
                                     Kanari Network empowers developers to create secure,
                                     transparent, and efficient blockchain applications.
@@ -101,14 +107,14 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 
                                         hover:to-orange-700 text-white px-8 py-4 rounded-full font-semibold 
                                         transition-all duration-300 hover:-translate-y-1 hover:shadow-xl 
-                                        active:translate-y-0"
+                                        active:translate-y-0 animate-slide-up"
                                     >
                                         Start Building
                                     </a>
                                     <a href="#"
                                         className="bg-white/10 backdrop-blur-sm border border-white/20 text-white 
                                         px-8 py-4 rounded-full font-semibold transition-all duration-300 
-                                        hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0"
+                                        hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0 animate-slide-up"
                                     >
                                         Learn More
                                     </a>
@@ -122,26 +128,45 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                 {/* Features Section */}
                 <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-                    {/* Optimized Cosmic Background */}
-                    <div className="absolute inset-0 overflow-hidden">
-                        {/* Optimized Stars - Using pseudo elements instead of DOM elements */}
-                        <div className="stars will-change-transform"></div>
+                    {/* Enhanced Cosmic Background */}
+                    <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-blue-900/30 to-purple-900/30">
+                        {/* Multi-layered Stars */}
+                        <div className="stars-layer-1 will-change-transform"></div>
+                        <div className="stars-layer-2 will-change-transform"></div>
+                        <div className="aurora"></div>
+                        <div className="nebula-effect"></div>
 
-                        {/* Reduced number of shooting stars & optimized transforms */}
+                        {/* Star Clusters */}
+                        {[...Array(20)].map((_, i) => (
+                            <div
+                                key={i}
+                                className="star-cluster"
+                                style={{
+                                    left: `${Math.random() * 100}%`,
+                                    top: `${Math.random() * 100}%`,
+                                    animationDelay: `${Math.random() * 3}s`
+                                }}
+                            />
+                        ))}
+
+                        {/* Enhanced Shooting Stars */}
                         <div className="shooting-stars">
-                            {[...Array(3)].map((_, i) => (
+                            {[...Array(7)].map((_, i) => (
                                 <div
                                     key={i}
-                                    className="shooting-star will-change-transform"
+                                    className="shooting-star"
                                     style={{
-                                        animationDelay: `${i * 3}s`,
+                                        animationDelay: `${i * 2}s`,
                                         transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%) rotate(-45deg)`
                                     }}
-                                ></div>
+                                />
                             ))}
                         </div>
 
-                        {/* Optimized Galaxy Glow */}
+                        {/* Nebula Effects */}
+                        <div className="nebula-effect will-change-opacity"></div>
+
+                        {/* Enhanced Galaxy Glow */}
                         <div className="galaxy-glow will-change-opacity"></div>
                     </div>
 
