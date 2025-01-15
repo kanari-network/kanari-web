@@ -20,15 +20,15 @@ const HeroSection: NextPage<Props> = ({ }) => {
     useEffect(() => {
         // Simulate loading time
         const timer = setTimeout(() => {
-          setIsLoading(false);
+            setIsLoading(false);
         }, 2000);
-    
+
         return () => clearTimeout(timer);
-      }, []);
-    
-      if (isLoading) {
+    }, []);
+
+    if (isLoading) {
         return <LoadingHeroSection />;
-      }
+    }
 
     return (
 
@@ -119,168 +119,183 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                 </section>
 
+
                 {/* Features Section */}
-                <section className="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
-                    <div className="max-w-7xl mx-auto text-center">
-                        <div className="text-center space-y-6">
-                            <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r 
-                            from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 
-                            dark:to-purple-200 bg-clip-text text-transparent group">
-                                Kanari Network:
-                                <span className="block mt-2 group-hover:translate-x-2 transition-transform">
-                                    Empowering the Future of Finance
-                                </span>
-                                <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 
-                                rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
-                            </h2>
+                <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                    {/* Optimized Cosmic Background */}
+                    <div className="absolute inset-0 overflow-hidden">
+                        {/* Optimized Stars - Using pseudo elements instead of DOM elements */}
+                        <div className="stars will-change-transform"></div>
 
-                            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                Kanari Network is a decentralized blockchain platform designed to
-                                revolutionize the way we interact with financial services. Our
-                                cutting-edge technology empowers developers to build secure,
-                                transparent, and efficient applications that benefit everyone.
-                            </p>
+                        {/* Reduced number of shooting stars & optimized transforms */}
+                        <div className="shooting-stars">
+                            {[...Array(3)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className="shooting-star will-change-transform"
+                                    style={{
+                                        animationDelay: `${i * 3}s`,
+                                        transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%) rotate(-45deg)`
+                                    }}
+                                ></div>
+                            ))}
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {/* Feature Card 1 */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
-                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        {/* Network nodes */}
-                                        <circle cx="12" cy="7" r="3" strokeWidth="2"/>
-                                        <circle cx="7" cy="17" r="3" strokeWidth="2"/>
-                                        <circle cx="17" cy="17" r="3" strokeWidth="2"/>
-                                        
-                                        {/* Connection lines */}
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                              d="M12 10L7 14M12 10L17 14"/>
-                                    </svg>
-                                }
-                                title="Decentralized Finance"
-                                description="Experience the power of DeFi with Kanari Network. Access a wide range of financial services without intermediaries, giving you full control over your assets."
-                            />
 
-                            {/* Feature Card 2 - Repeat similar structure */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                    </svg>
-                                }
-                                title="Smart Contracts"
-                                description="Build and deploy secure and automated smart contracts on Kanari Network. Our robust infrastructure ensures the integrity and reliability of your applications."
-                            />
-
-                            {/* Feature Card 3 - Repeat similar structure */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75" />
-                                    </svg>
-                                }
-                                title="Community Driven"
-                                description="Join our vibrant community of developers, entrepreneurs, and enthusiasts. Collaborate, innovate, and shape the future of Kanari Network together."
-                            />
-                        </div>
+                        {/* Optimized Galaxy Glow */}
+                        <div className="galaxy-glow will-change-opacity"></div>
                     </div>
-                </section>
 
-                {/* Investors Section */}
-                <section className="py-20 px-4 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}
-                    <div className="max-w-7xl mx-auto text-center">
-                        <div className="text-center space-y-6">
-                            <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r 
+                    {/* Content */}
+                    <div className="relative z-10">
+
+                        {/* Features Section */}
+                        <section className="py-20 px-4"> {/* Added dark mode gradient */}
+                            <div className="max-w-7xl mx-auto text-center">
+                                <div className="text-center space-y-6">
+                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
+                                        Kanari Network:
+                                        <span className="block mt-2 group-hover:translate-x-2 transition-transform">
+                                            Empowering the Future of Finance
+                                        </span>
+                                        <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
+                                    </h2>
+
+                                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                                        Kanari Network is a decentralized blockchain platform designed to
+                                        revolutionize the way we interact with financial services. Our
+                                        cutting-edge technology empowers developers to build secure,
+                                        transparent, and efficient applications that benefit everyone.
+                                    </p>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                    {/* Feature Card 1 */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                {/* Network nodes */}
+                                                <circle cx="12" cy="7" r="3" strokeWidth="2" />
+                                                <circle cx="7" cy="17" r="3" strokeWidth="2" />
+                                                <circle cx="17" cy="17" r="3" strokeWidth="2" />
+
+                                                {/* Connection lines */}
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M12 10L7 14M12 10L17 14" />
+                                            </svg>
+                                        }
+                                        title="Decentralized Finance"
+                                        description="Experience the power of DeFi with Kanari Network. Access a wide range of financial services without intermediaries, giving you full control over your assets."
+                                    />
+
+                                    {/* Feature Card 2 - Repeat similar structure */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                            </svg>
+                                        }
+                                        title="Smart Contracts"
+                                        description="Build and deploy secure and automated smart contracts on Kanari Network. Our robust infrastructure ensures the integrity and reliability of your applications."
+                                    />
+
+                                    {/* Feature Card 3 - Repeat similar structure */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75" />
+                                            </svg>
+                                        }
+                                        title="Community Driven"
+                                        description="Join our vibrant community of developers, entrepreneurs, and enthusiasts. Collaborate, innovate, and shape the future of Kanari Network together."
+                                    />
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Investors Section */}
+                        <section className="py-20 px-4"> {/* Added dark mode gradient */}
+                            <div className="max-w-7xl mx-auto text-center">
+                                <div className="text-center space-y-6">
+                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r 
                             from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 
                             dark:to-purple-200 bg-clip-text text-transparent group">
-                                Kanari Network:
-                                <span className="block mt-2 group-hover:translate-x-2 transition-transform">
-                                    Empowering Investors
-                                </span>
-                                <div className="h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 
+                                        Kanari Network:
+                                        <span className="block mt-2 group-hover:translate-x-2 transition-transform">
+                                            Empowering Investors
+                                        </span>
+                                        <div className="h-1 w-32 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 
                                 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
-                            </h2>
+                                    </h2>
 
-                            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                                Kanari Network provides unique opportunities for investors to be
-                                part of the decentralized future.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {/* Investor Card 1 */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" 
-                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" strokeWidth="2"/>
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                                              d="M12 7v10M8 12h8"/>
-                                    </svg>
-                                }
-                                title="Early Adoption"
-                                description="Be an early investor in a rapidly growing ecosystem. Kanari Network is at the forefront of blockchain innovation, offering substantial growth potential."
-                            />
+                                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                                        Kanari Network provides unique opportunities for investors to be
+                                        part of the decentralized future.
+                                    </p>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                    {/* Investor Card 1 */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M12 7v10M8 12h8" />
+                                            </svg>
+                                        }
+                                        title="Early Adoption"
+                                        description="Be an early investor in a rapidly growing ecosystem. Kanari Network is at the forefront of blockchain innovation, offering substantial growth potential."
+                                    />
 
-                            {/* Investor Card 2 - Repeat similar structure */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        {/* Back coin */}
-                                        <circle cx="14" cy="14" r="7" strokeWidth="2"/>
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                                              d="M14 11v6M11 14h6"/>
-                                        
-                                        {/* Front coin */}
-                                        <circle cx="10" cy="10" r="7" strokeWidth="2"/>
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" 
-                                              d="M10 7v6M7 10h6"/>
-                                    </svg>
-                                }
-                                title="Tokenization"
-                                description="Explore new investment avenues with tokenized assets. Kanari Network facilitates fractional ownership and liquidity, opening doors to previously inaccessible markets."
-                            />
+                                    {/* Investor Card 2 - Repeat similar structure */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                {/* Back coin */}
+                                                <circle cx="14" cy="14" r="7" strokeWidth="2" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M14 11v6M11 14h6" />
 
-                            {/* Investor Card 3 - Repeat similar structure */}
-                            <InvestorCard
-                                icon={
-                                    <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M12 8c-1.658 0-3 .895-3 2s1.342 2 3 2 3-.895 3-2-1.342-2-3-2zM3 
+                                                {/* Front coin */}
+                                                <circle cx="10" cy="10" r="7" strokeWidth="2" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                                    d="M10 7v6M7 10h6" />
+                                            </svg>
+                                        }
+                                        title="Tokenization"
+                                        description="Explore new investment avenues with tokenized assets. Kanari Network facilitates fractional ownership and liquidity, opening doors to previously inaccessible markets."
+                                    />
+
+                                    {/* Investor Card 3 - Repeat similar structure */}
+                                    <InvestorCard
+                                        icon={
+                                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M12 8c-1.658 0-3 .895-3 2s1.342 2 3 2 3-.895 3-2-1.342-2-3-2zM3 
                                             12c0 4.411 3.589 8 8 8s8-3.589 8-8-3.589-8-8-8-8 3.589-8 8z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
-                                    </svg>
-                                }
-                                title="Decentralized Governance"
-                                description="Participate in the governance of Kanari Network. As a token holder, you have a voice in shaping the future direction of the platform."
-                            />
-                        </div>
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+                                            </svg>
+                                        }
+                                        title="Decentralized Governance"
+                                        description="Participate in the governance of Kanari Network. As a token holder, you have a voice in shaping the future direction of the platform."
+                                    />
+                                </div>
+                            </div>
+                        </section>
+
+                        <VCSection />
+                        <LatestUpdates />
+                        <OfficialChannels />
+                        <NewsletterSection />
                     </div>
-                </section>
-
-
-
-                
-                <section className=" bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"> {/* Added dark mode gradient */}          
-                    {/* VC Section */}
-                    <VCSection />
-
-                    {/* Latest Updates  Section */}
-                    <LatestUpdates />
-
-                    {/* Official Channels */}
-                    <OfficialChannels />
-
-                    {/* Newsletter Section */}
-                    <NewsletterSection />
-
                 </section>
 
 

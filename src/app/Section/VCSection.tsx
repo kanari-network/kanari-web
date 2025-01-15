@@ -71,17 +71,19 @@ export function VCSection() {
             {/* VC Section */}
             <section className="py-20 px-4 ">
                 <div className="w-full mx-auto">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r 
-                    from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 
-                    dark:to-purple-200 bg-clip-text text-transparent">
-                        Backed by Leading Investors
-                    </h2>
-                    
-                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 text-center 
-                    max-w-3xl mx-auto leading-relaxed">
-                        Kanari Network is supported by a strong network of investors who believe in our vision.
-                    </p>
+                    <div className="text-center space-y-6">
+                        <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
+                            Kanari Network:
+                            <span className="block mt-2 group-hover:translate-x-2 transition-transform">
+                                Backed by Leading Investors
+                            </span>
+                            <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
+                        </h2>
 
+                        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            Kanari Network is supported by a strong network of investors who believe in our vision.
+                        </p>
+                    </div>
                     <div className="relative">
                         {/* Gradient Masks */}
                         <div className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
@@ -121,10 +123,10 @@ export function VCSection() {
                                                     e.currentTarget.src = '/placeholder.png';
                                                 }}
                                             />
-                                            
+
                                             {/* Gradient Overlay */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                                            
+
                                             {/* Content */}
                                             <div className="absolute bottom-0 left-0 right-0 p-6">
                                                 <h3 className="text-white font-bold text-xl mb-2">{vc.name}</h3>
