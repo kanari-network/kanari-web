@@ -38,6 +38,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
 
             {/* Links */}
             <div className="grid grid-cols-2 gap-12 sm:gap-16 sm:grid-cols-3">
+
               {/* Resources */}
               <div className="space-y-6">
                 <h2 className="text-sm font-bold uppercase tracking-wider">
@@ -77,7 +78,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 <h2 className="text-sm font-bold uppercase tracking-wider">
                   Solutions
                 </h2>
-                <ul className="font-medium">
+                <ul className="space-y-4">
                   <li className="mb-4">
                     <a href="https://github.com/jamesatomc/walletkari" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Pay soon
@@ -101,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 <h2 className="text-sm font-bold uppercase tracking-wider">
                   About
                 </h2>
-                <ul className="font-medium">
+                <ul className="space-y-4">
                   <li className="mb-4">
                     <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Foundation
