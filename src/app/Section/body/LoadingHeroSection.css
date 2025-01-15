@@ -1,0 +1,24 @@
+@keyframes shimmer {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(-20px, -20px); }
+      100% { transform: translate(0, 0); }
+  }
+  
+  .animate-float-slow {
+      animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-delay {
+      animation: float 8s ease-in-out infinite;
+      animation-delay: -4s;
+  }

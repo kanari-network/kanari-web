@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import './VCSection.css';
 
 export function VCSection() {
     // Sample VC and Investor data (replace with your actual data)
