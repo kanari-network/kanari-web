@@ -1,18 +1,18 @@
-import React, { useRef, useState, useEffect } from 'react';
-
+import React, { useRef, useState, useEffect, useCallback } from 'react';
+import './LatestUpdates.css';
 
 function LatestUpdates() {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [showLeftButton, setShowLeftButton] = useState(false);
     const [showRightButton, setShowRightButton] = useState(true);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         if (scrollRef.current) {
             const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
             setShowLeftButton(scrollLeft > 0);
             setShowRightButton(scrollLeft < scrollWidth - clientWidth - 10);
         }
-    };
+    }, []);
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
@@ -25,10 +25,10 @@ function LatestUpdates() {
         const ref = scrollRef.current;
         if (ref) {
             ref.addEventListener('scroll', handleScroll);
+            handleScroll(); // ตรวจสอบการเลื่อนเมื่อโหลดหน้าเว็บ
             return () => ref.removeEventListener('scroll', handleScroll);
         }
-    }, []);
-
+    }, [handleScroll]);
 
     const blogupdates = [
         {
@@ -104,28 +104,51 @@ function LatestUpdates() {
                         className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide scroll-smooth"
                     >
                         {blogupdates.map((blog, index) => (
-                            <a key={index} href={blog.Url} target="_blank" rel="noopener noreferrer"
-                                className="flex-none w-[300px] backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 
-                                border border-gray-200/50 dark:border-gray-700/50 rounded-xl overflow-hidden 
-                                hover:scale-105 transition-all duration-300 group"
+                            <a key={index} 
+                               href={blog.Url} 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="flex-none w-[300px] backdrop-blur-sm 
+                                          bg-gradient-to-br from-white/40 to-white/10 
+                                          dark:from-gray-800/40 dark:to-gray-800/10 
+                                          border border-gray-200/50 dark:border-gray-700/50 
+                                          rounded-xl overflow-hidden 
+                                          hover:scale-105 hover:shadow-xl
+                                          hover:shadow-blue-500/20
+                                          transition-all duration-300 group"
                             >
-                                <div className="aspect-w-16 aspect-h-9 bg-black relative">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+                                <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-600 to-purple-600 relative">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
                                     <img 
                                         src={blog.image} 
                                         alt={blog.title}
-                                        className="w-full h-48 object-cover transform group-hover:scale-105 
-                                        transition-transform duration-500 opacity-90 hover:opacity-100"
+                                        className="w-full h-48 object-cover transform 
+                                                   group-hover:scale-110 group-hover:rotate-1
+                                                   transition-transform duration-700 ease-out
+                                                   opacity-90 hover:opacity-100"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 
+                                                   group-hover:opacity-0 transition-opacity duration-300"></div>
                                 </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold mb-2 line-clamp-2 bg-gradient-to-r 
-                                    from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text 
-                                    text-transparent">{blog.title}</h3>
-                                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                                <div className="p-6 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 
+                                                   opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <h3 className="text-xl font-bold mb-2 line-clamp-2 
+                                                  bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 
+                                                  dark:from-white dark:via-blue-300 dark:to-purple-200 
+                                                  bg-clip-text text-transparent 
+                                                  group-hover:scale-105 transition-transform duration-300">
+                                        {blog.title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 
+                                                 group-hover:text-gray-800 dark:group-hover:text-gray-200 
+                                                 transition-colors duration-300">
                                         {blog.description}
                                     </p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">{blog.data}</p>
+                                    <p className="text-sm bg-gradient-to-r from-blue-500 to-purple-500 
+                                                 bg-clip-text text-transparent font-medium">
+                                        {blog.data}
+                                    </p>
                                 </div>
                             </a>
                         ))}

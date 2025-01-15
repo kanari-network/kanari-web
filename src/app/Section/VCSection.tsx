@@ -69,7 +69,7 @@ export function VCSection() {
     return (
         <>
             {/* VC Section */}
-            <section className="py-20 ">
+            <section className="py-20">
                 <div className="w-full mx-auto">
                     <div className="text-center space-y-6">
                         <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
@@ -86,13 +86,13 @@ export function VCSection() {
                     </div>
                     <div className="relative">
                         {/* Gradient Masks */}
-                        <div className="absolute left-0 top-0 bottom-0 "></div>
-                        <div className="absolute right-0 top-0 bottom-0 "></div>
+                        <div className="absolute left-0 top-0 bottom-0"></div>
+                        <div className="absolute right-0 top-0 bottom-0"></div>
 
                         <div className="relative overflow-hidden">
                             {/* Gradient Masks */}
-                            <div className="absolute left-0 top-0 bottom-0 w-8  "></div>
-                            <div className="absolute right-0 top-0 bottom-0 w-8 "></div>
+                            <div className="absolute left-0 top-0 bottom-0 w-8"></div>
+                            <div className="absolute right-0 top-0 bottom-0 w-8"></div>
 
                             {/* Scrollable Container */}
                             <div
