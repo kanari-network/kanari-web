@@ -89,3 +89,14 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite ease-in-out;
+}

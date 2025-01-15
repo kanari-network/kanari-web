@@ -72,26 +72,24 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
-          <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-128 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <div className="grid grid-cols-3 gap-4">
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/basics" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/advanced" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/tutorials" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
-              </li>
-            </div>
-            {/* <div className="grid grid-cols-3 gap-4">
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/basics" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/advanced" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
-              </li>
-            </div> */}
+          <ul className={`absolute top-full left-1/2 -translate-x-1/2 shadow-lg rounded-lg w-[480px] py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+              <div className="grid grid-cols-3 gap-4">
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/basics" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/advanced" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/tutorials" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
+                  </li>
+              </div>
           </ul>
         </li>
 
@@ -115,18 +113,24 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
-          <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-128 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <div className="grid grid-cols-3 gap-4">
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/build/projects" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Projects</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/build/tools" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tools</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/build/resources" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Resources</Link>
-              </li>
-            </div>
+          <ul className={`absolute top-full left-1/2 -translate-x-1/2 shadow-lg rounded-lg w-[480px] py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+              <div className="grid grid-cols-3 gap-4">
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/basics" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/advanced" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/tutorials" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
+                  </li>
+              </div>
           </ul>
         </li>
 
@@ -151,18 +155,24 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             </svg>
           </Link>
           <div className={`absolute bottom-0 left-0 w-full h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${darkMode ? 'bg-gradient-to-r from-orange-400 to-yellow-300' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}`}></div>
-          <ul className={`absolute top-full left-0 shadow-lg rounded-lg w-128 py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <div className="grid grid-cols-3 gap-4">
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/connect/community" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Community</Link>
-              </li>
-              {/* <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-              <Link href="/connect/events" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Events</Link>
-            </li>
-            <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-              <Link href="/connect/contact" className={`block px-2 py-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Contact Us</Link>
-            </li> */}
-            </div>
+          <ul className={`absolute top-full left-1/2 -translate-x-1/2 shadow-lg rounded-lg w-[480px] py-2 px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible transform z-10 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
+              <div className="grid grid-cols-3 gap-4">
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/basics" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/advanced" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
+                  </li>
+                  <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
+                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
+                      <Link href="/learn/tutorials" className={`block px-2 py-1 text-center 
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
+                  </li>
+              </div>
           </ul>
 
         </li>
@@ -220,12 +230,6 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/learn/tutorials" className="block px-2 py-1 text-gray-800 dark:text-white">Tutorials</Link>
                 </li>
-                {/* <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <Link href="/learn/basics" className="block px-2 py-1 text-gray-800 dark:text-white">Basics</Link>
-                </li>
-                <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <Link href="/learn/advanced" className="block px-2 py-1 text-gray-800 dark:text-white">Advanced</Link>
-                </li> */}
               </ul>
             )}
           </li>
@@ -280,12 +284,6 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/connect/community" className="block px-2 py-1 text-gray-800 dark:text-white">Community</Link>
                 </li>
-                {/* <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <Link href="/connect/events" className="block px-2 py-1 text-gray-800 dark:text-white">Events</Link>
-                </li>
-                <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <Link href="/connect/contact" className="block px-2 py-1 text-gray-800 dark:text-white">Contact Us</Link>
-                </li> */}
               </ul>
             )}
           </li>

@@ -4,16 +4,31 @@ import { VCSection } from './Section/VCSection'
 import { NewsletterSection } from './Section/NewsletterSection'
 import Navbar from './Section/body/Navbar'
 import Footer from './Section/body/Footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { OfficialChannels } from './Section/OfficialChannels';
 import LatestUpdates from './Section/LatestUpdates';
 import { InvestorCard } from './Section/body/InvestorCard';
+import LoadingHeroSection from './Section/body/LoadingHeroSection';
 
 
 interface Props { }
 
 const HeroSection: NextPage<Props> = ({ }) => {
     const [darkMode, setDarkMode] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate loading time
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 2000);
+    
+        return () => clearTimeout(timer);
+      }, []);
+    
+      if (isLoading) {
+        return <LoadingHeroSection />;
+      }
 
     return (
 
