@@ -25,18 +25,37 @@ export function NewsletterSection() {
                         Get the latest news, updates, and insights delivered straight to your inbox.
                     </p>
 
+
                     <form className="flex flex-col items-center space-y-6 w-full max-w-2xl mx-auto">
-                        <input
-                            type="email"
-                            id="Email"
-                            className="w-full px-6 py-4 text-base bg-white/30 dark:bg-gray-800/30 
-                            border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:ring-4 
-                            ring-blue-500/30 text-gray-900 dark:text-white 
-                            placeholder:text-gray-500 dark:placeholder:text-gray-400 
-                            backdrop-blur-sm transition-all duration-300"
-                            placeholder="Enter your email"
-                            required
-                        />
+                        <div className="relative w-full">
+                            <input
+                                type="email"
+                                id="Email"
+                                className="w-full pl-12 pr-6 py-4 text-base bg-white/30 dark:bg-gray-800/30 
+                                border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:ring-2 
+                                ring-blue-500/30 text-gray-900 dark:text-white 
+                                placeholder:text-gray-500 dark:placeholder:text-gray-400 
+                                backdrop-blur-sm transition-all duration-300"
+                                placeholder="Enter your email"
+                                required
+                            />
+                            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg
+                                    className="h-5 w-5 text-gray-500 dark:text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
 
                         <button
                             type="submit"

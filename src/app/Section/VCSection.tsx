@@ -7,33 +7,33 @@ export function VCSection() {
     // Sample VC and Investor data (replace with your actual data)
     const vcs = [
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
-            name: "jamesatomc",
-            logo: "/jamesatomc.png",
+            name: "1",
+            logo: "",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         // ... add more VCs with investment details
@@ -42,7 +42,7 @@ export function VCSection() {
     const [selectedVC, setSelectedVC] = useState<number | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
-
+    
     // Auto scroll effect
     useEffect(() => {
         if (!isPaused) {
@@ -50,7 +50,7 @@ export function VCSection() {
                 if (scrollContainerRef.current) {
                     const isAtEnd = scrollContainerRef.current.scrollLeft + scrollContainerRef.current.offsetWidth >=
                         scrollContainerRef.current.scrollWidth;
-
+    
                     if (isAtEnd) {
                         scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
                     } else {
@@ -58,14 +58,11 @@ export function VCSection() {
                     }
                 }
             }, 30); // Adjust speed here
-
+    
             return () => clearInterval(interval);
         }
     }, [isPaused]);
-
-    // Duplicate VCs array for infinite scroll effect
-    const duplicatedVcs = [...vcs, ...vcs];
-
+    
     return (
         <>
             {/* VC Section */}
@@ -79,7 +76,7 @@ export function VCSection() {
                             </span>
                             <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
                         </h2>
-
+    
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                             Kanari Network is supported by a strong network of investors who believe in our vision.
                         </p>
@@ -88,12 +85,12 @@ export function VCSection() {
                         {/* Gradient Masks */}
                         <div className="absolute left-0 top-0 bottom-0"></div>
                         <div className="absolute right-0 top-0 bottom-0"></div>
-
+    
                         <div className="relative overflow-hidden">
                             {/* Gradient Masks */}
                             <div className="absolute left-0 top-0 bottom-0 w-8"></div>
                             <div className="absolute right-0 top-0 bottom-0 w-8"></div>
-
+    
                             {/* Scrollable Container */}
                             <div
                                 ref={scrollContainerRef}
@@ -106,39 +103,28 @@ export function VCSection() {
                                     scrollBehavior: 'smooth'
                                 }}
                             >
-                                {duplicatedVcs.map((vc, index) => (
+                                {vcs.concat(vcs).map((vc, index) => (
                                     <button
                                         key={`${index}-${vc.name}`}
                                         onClick={() => setSelectedVC(index % vcs.length)}
-                                        className="flex-none w-[280px] h-[320px] rounded-xl overflow-hidden shadow-lg 
+                                        className="flex-none w-[200px] h-[200px] rounded-full overflow-hidden shadow-lg 
                                                  transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
                                     >
-                                        <div className="relative w-full h-full bg-gray-100 dark:bg-gray-800">
+                                        <div className="relative w-full h-full bg-gray-100 dark:bg-gray-800 rounded-full">
                                             {/* Image with fallback */}
                                             <img
                                                 src={vc.logo}
                                                 alt={vc.name}
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover rounded-full"
                                                 onError={(e) => {
                                                     e.currentTarget.src = '/placeholder.png';
                                                 }}
                                             />
-
-                                            {/* Gradient Overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-
-                                            {/* Content */}
-                                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                                <h3 className="text-white font-bold text-xl mb-2">{vc.name}</h3>
-                                                <p className="text-gray-200 text-sm truncate">
-                                                    {vc.investmentDetails}
-                                                </p>
-                                            </div>
                                         </div>
                                     </button>
                                 ))}
                             </div>
-
+    
                         </div>
                     </div>
                 </div>
@@ -188,7 +174,7 @@ export function VCSection() {
                     </div>
                 </div>
             )}
-
+    
         </>
     );
 }
