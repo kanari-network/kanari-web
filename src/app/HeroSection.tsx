@@ -32,98 +32,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
     return (
 
-        <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-orange-500 to-yellow-500'}>
-
+        <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-
             <main className="relative">
-                {/* Hero Section */}
-                <section className="pt-24 py-2 px-2 relative overflow-hidden h-190 ">
-
-                    {/* Parallax Background */}
-                    <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-white/10 relative group">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="object-cover h-[700px] w-full scale-105 group-hover:scale-100 
-                            transition-transform duration-700"
-                        >
-                            <source src="/Lines.mp4" type="video/mp4" />
-                        </video>
-
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/95 via-yellow-500/90 
-                        to-orange-600/95 dark:from-gray-900/95 dark:via-gray-800/90 dark:to-gray-900/95 
-                        backdrop-blur-sm">
-                            <div className="max-w-4xl mx-auto h-full flex flex-col items-center justify-center 
-                            px-4 space-y-8">
-                                <h1 className="
-                                  text-white 
-                                  text-center
-                                  text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
-                                  font-bold
-                                  leading-tight 
-                                  tracking-tight 
-                                  animate-slide-up
-                                  opacity-0
-                                  mx-auto
-                                ">
-                                    Build Smart Contracts
-                                    <span className="
-                                    block
-                                    mt-2 
-                                    text-transparent 
-                                    bg-clip-text 
-                                    bg-gradient-to-r 
-                                    from-white to-orange-200 
-                                    dark:from-white dark:to-gray-400
-                                    animate-slide-up
-                                    opacity-0
-                                    [animation-delay:0.2s]
-                                  ">
-                                        with Ease
-                                    </span>
-                                </h1>
-
-                                <p className="
-                                  text-white/90
-                                  text-center
-                                  text-lg sm:text-xl md:text-2xl
-                                  font-medium
-                                  max-w-3xl
-                                  mx-auto
-                                  leading-relaxed
-                                  animate-slide-up
-                                  opacity-0
-                                  [animation-delay:0.4s]
-                                ">
-                                    Kanari Network empowers developers to create secure,
-                                    transparent, and efficient blockchain applications.
-                                </p>
-
-                                <div className="flex flex-wrap justify-center gap-4 mt-8">
-                                    <a href="https://docs.kanari.network/"
-                                        className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 
-                                        hover:to-orange-700 text-white px-8 py-4 rounded-full font-semibold 
-                                        transition-all duration-300 hover:-translate-y-1 hover:shadow-xl 
-                                        active:translate-y-0 animate-slide-up"
-                                    >
-                                        Start Building
-                                    </a>
-                                    <a href="#"
-                                        className="bg-white/10 backdrop-blur-sm border border-white/20 text-white 
-                                        px-8 py-4 rounded-full font-semibold transition-all duration-300 
-                                        hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0 animate-slide-up"
-                                    >
-                                        Learn More
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
 
 
                 {/* Features Section */}
@@ -172,6 +83,86 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                     {/* Content */}
                     <div className="relative z-10">
+                        <section className="pt-24 py-2 px-2 ">
+                            <div className="parallax-bg rounded-[40px] overflow-hidden shadow-2xl border border-gray-200/20 relative group">
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="object-cover h-[700px] w-full scale-105 group-hover:scale-100 transition-transform duration-700"
+                                >
+                                    <source src="/Lines.mp4" type="video/mp4" />
+                                </video>
+
+                                <div className="absolute inset-0 bg-gradient-to-br from-gray-800/95 via-gray-700/90  to-gray-800/95 dark:from-gray-900/95 dark:via-gray-800/90 dark:to-gray-900/95 backdrop-blur-sm">
+                                    <div className="max-w-4xl mx-auto h-full flex flex-col items-center justify-center px-4 space-y-8">
+                                        <h1 className="
+                                  text-white 
+                                  text-center
+                                  text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
+                                  font-bold
+                                  leading-tight 
+                                  tracking-tight 
+                                  animate-slide-up
+                                  opacity-0
+                                  mx-auto
+                                ">
+                                            Build Smart Contracts
+                                            <span className="
+                                    block
+                                    mt-2 
+                                    text-transparent 
+                                    bg-clip-text 
+                                    bg-gradient-to-r 
+                                    from-white to-orange-200 
+                                    dark:from-white dark:to-gray-400
+                                    animate-slide-up
+                                    opacity-0
+                                    [animation-delay:0.2s]
+                                  ">
+                                                with Ease
+                                            </span>
+                                        </h1>
+
+                                        <p className="
+                                  text-white/90
+                                  text-center
+                                  text-lg sm:text-xl md:text-2xl
+                                  font-medium
+                                  max-w-3xl
+                                  mx-auto
+                                  leading-relaxed
+                                  animate-slide-up
+                                  opacity-0
+                                  [animation-delay:0.4s]
+                                ">
+                                            Kanari Network empowers developers to create secure,
+                                            transparent, and efficient blockchain applications.
+                                        </p>
+
+                                        <div className="flex flex-wrap justify-center gap-4 mt-8">
+                                            <a href="https://docs.kanari.network/"
+                                                className="bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 
+                                      hover:to-gray-900 text-white px-8 py-4 rounded-full font-semibold 
+                                        transition-all duration-300 hover:-translate-y-1 hover:shadow-xl 
+                                        active:translate-y-0 animate-slide-up"
+                                            >
+                                                Start Building
+                                            </a>
+                                            <a href="#"
+                                                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white 
+                                        px-8 py-4 rounded-full font-semibold transition-all duration-300 
+                                        hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0 animate-slide-up"
+                                            >
+                                                Learn More
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
 
                         {/* Features Section */}
                         <section className="py-20 px-4"> {/* Added dark mode gradient */}
@@ -320,12 +311,14 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         <LatestUpdates />
                         <OfficialChannels />
                         <NewsletterSection />
+
+                        <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
                     </div>
                 </section>
 
 
             </main>
-            <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+
 
         </div>
     )

@@ -1,0 +1,90 @@
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  25% {
+    transform: translateX(-15%) translateZ(0) scaleY(0.8);
+  }
+  50% {
+    transform: translateX(-30%) translateZ(0) scaleY(0.6);
+  }
+  75% {
+    transform: translateX(-45%) translateZ(0) scaleY(0.8);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.wave-container {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 119, 0, 0.8) 0%,
+    rgba(255, 161, 0, 0.6) 50%,
+    rgba(255, 119, 0, 0.8) 100%
+  );
+  border-radius: 50%;
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+
+.wave1 {
+  animation: wave 15s linear infinite;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.wave2 {
+  animation: wave 10s linear infinite;
+  z-index: 2;
+  opacity: 0.15;
+}
+
+.wave3 {
+  animation: wave 8s linear infinite;
+  z-index: 3;
+  opacity: 0.1;
+}
+
+.wave4 {
+  animation: wave 6s linear infinite;
+  z-index: 4;
+  opacity: 0.08;
+}
+
+.wave5 {
+  animation: wave 4s linear infinite;
+  z-index: 5;
+  opacity: 0.05;
+}
+
+.dark .wave {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 24, 39, 0.8) 0%,
+    rgba(55, 65, 81, 0.6) 50%,
+    rgba(17, 24, 39, 0.8) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .wave-container {
+    height: 80%;
+  }
+  
+  .wave {
+    height: 80%;
+  }
+}

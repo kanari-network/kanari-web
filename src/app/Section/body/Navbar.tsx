@@ -191,13 +191,17 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
 
       <div
         onClick={() => setNav(!nav)}
-        className={`cursor-pointer pr-4 z-10 ${darkMode ? 'text-white' : 'text-white'} md:hidden`}
+        className={`cursor-pointer pr-4 z-10 ${darkMode ? 'text-white' : 'text-gray-800'} md:hidden`}
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-160 rounded-lg ${darkMode ? 'bg-gray-900 text-white shadow-2xl transform transition duration-500 ease-in-out translate-x-0 opacity-100' : 'bg-gradient-to-r from-orange-500 to-yellow-500 text-orange-200 shadow-2xl transform transition duration-500 ease-in-out -translate-x-full opacity-0'} ${nav ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+        <ul className={`flex flex-col justify-center items-center absolute top-0 left-0 w-full h-160 rounded-lg ${
+          darkMode 
+            ? 'bg-gray-900/90 text-gray-100 border border-gray-700/80 shadow-2xl transform transition duration-500 ease-in-out translate-x-0 opacity-100' 
+            : 'bg-white/90 text-gray-800 border border-gray-200/80 shadow-2xl transform transition duration-500 ease-in-out -translate-x-full opacity-0'
+        } ${nav ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
           <li className="px-4 cursor-pointer capitalize py-6 text-4xl transform transition duration-300 ease-in-out hover:scale-110">
             <Link onClick={() => setNav(!nav)} href="/">
               Home
