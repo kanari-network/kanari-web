@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import './NewsletterSection.css';
+import { createPortal } from 'react-dom';
 
 export function NewsletterSection() {
 
@@ -77,7 +78,7 @@ export function NewsletterSection() {
                 dark:from-blue-900/10 dark:to-purple-900/10 -z-10"></div>
             </section>
 
-            {showTerms && (
+            {showTerms && createPortal(
                 <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999]">
                     <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl max-w-3xl w-full mx-4 shadow-xl relative">
                         <div className="flex justify-between items-center mb-6">
@@ -130,7 +131,8 @@ export function NewsletterSection() {
                             </button>
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
