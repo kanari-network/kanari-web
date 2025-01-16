@@ -17,31 +17,52 @@
 .animate-slide-up {
   animation: slideUp 1s ease-out forwards;
 }
-
 /* Basic Dropdown Styling */
-.nav-item ul { 
-  display: none; /* Hide by default */
-  position: absolute; 
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Ensure dropdown appears above other elements */
+.nav-item ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .nav-item:hover ul {
-  display: block; /* Show on hover */
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-item ul li {
-  padding: 10px;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s ease;
 }
 
-/* Optional: Add a dropdown icon to the "Learn" link */
+/* Dropdown icon animation */
 .nav-item svg {
-  /* ... your SVG styles */
-  transition: transform 0.3s ease; /* Add a smooth transition */
+  transition: transform 0.3s ease;
 }
 
 .nav-item:hover svg {
-  transform: rotate(180deg); /* Rotate icon on hover */
+  transform: rotate(180deg);
+}
+
+/* Additional styles for stacking context */
+.nav-item {
+  position: relative;
+  z-index: 50;
+}
+
+/* Ensure dropdown container stays above other elements */
+.nav-item:hover {
+  z-index: 100;
 }
 
 
