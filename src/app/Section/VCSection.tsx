@@ -8,32 +8,32 @@ export function VCSection() {
     const vcs = [
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         {
             name: "1",
-            logo: "",
+            logo: "https://raw.githubusercontent.com/kanari-network/about/main/kari1.png",
             investmentDetails: "Invested $1 million in Series A funding.",
         },
         // ... add more VCs with investment details

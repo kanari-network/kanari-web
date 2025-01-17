@@ -83,10 +83,9 @@ function LatestUpdates() {
                                className="flex-none w-[300px] backdrop-blur-sm 
                                           bg-gradient-to-br from-white/40 to-white/10 
                                           dark:from-gray-800/40 dark:to-gray-800/10 
-                                          border border-gray-200/50 dark:border-gray-700/50 
+                                          border border-gray-200/50 dark:border-gray-700/50
                                           rounded-xl overflow-hidden 
                                           hover:scale-105 hover:shadow-xl
-                                          hover:shadow-blue-500/20
                                           transition-all duration-300 group"
                             >
                                 <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-600 to-purple-600 relative">
