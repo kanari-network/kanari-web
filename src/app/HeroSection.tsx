@@ -269,7 +269,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                             </div>
                         </section>
 
-                        <VCSection />
+                        {/* <VCSection /> */}
                         <LatestUpdates />
                         <OfficialChannels />
                         <NewsletterSection />
