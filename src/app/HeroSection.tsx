@@ -41,44 +41,6 @@ const HeroSection: NextPage<Props> = ({ }) => {
                 <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                     {/* Enhanced Cosmic Background */}
                     <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-blue-900/30 to-purple-900/30">
-                        {/* Multi-layered Stars */}
-                        <div className="stars-layer-1 will-change-transform"></div>
-                        <div className="stars-layer-2 will-change-transform"></div>
-                        <div className="aurora"></div>
-                        <div className="nebula-effect"></div>
-
-                        {/* Star Clusters */}
-                        {[...Array(20)].map((_, i) => (
-                            <div
-                                key={i}
-                                className="star-cluster"
-                                style={{
-                                    left: `${Math.random() * 100}%`,
-                                    top: `${Math.random() * 100}%`,
-                                    animationDelay: `${Math.random() * 3}s`
-                                }}
-                            />
-                        ))}
-
-                        {/* Enhanced Shooting Stars */}
-                        <div className="shooting-stars">
-                            {[...Array(7)].map((_, i) => (
-                                <div
-                                    key={i}
-                                    className="shooting-star"
-                                    style={{
-                                        animationDelay: `${i * 2}s`,
-                                        transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%) rotate(-45deg)`
-                                    }}
-                                />
-                            ))}
-                        </div>
-
-                        {/* Nebula Effects */}
-                        <div className="nebula-effect will-change-opacity"></div>
-
-                        {/* Enhanced Galaxy Glow */}
-                        <div className="galaxy-glow will-change-opacity"></div>
                     </div>
 
                     {/* Content */}
