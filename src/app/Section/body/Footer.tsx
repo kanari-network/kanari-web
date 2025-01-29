@@ -142,7 +142,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
           {/* Copyright and Social */}
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className={`text-sm sm:text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              © 2024{' '}
+              © 2025{' '}
               <a href="#" className="hover:underline">
                 Kanari Network™
               </a>
