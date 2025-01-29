@@ -161,7 +161,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 <img
                   src="/Bluesky_Logo.svg"
                   alt="Bluesky Logo"
-                  className={`w-5 h-5 ${blueskyHover ? 'transform scale-125' : ''} dark:invert`}
+                  className={`w-5 h-5 ${blueskyHover ? 'transform scale-125' : ''}`}
                 />
                 <span className="sr-only">Bluesky profile</span>
               </a>
