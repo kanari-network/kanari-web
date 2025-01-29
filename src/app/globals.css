@@ -83,13 +83,18 @@
     transform-style: preserve-3d;
 }
 
+@keyframes twinkle {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
 .stars-small {
     background-image: 
         radial-gradient(1px 1px at 25% 25%, white 1px, transparent 0),
         radial-gradient(1px 1px at 75% 75%, rgba(147, 197, 253, 0.6) 1px, transparent 0);
     background-size: clamp(50px, 8vw, 100px) clamp(50px, 8vw, 100px);
-    animation: twinkleMove 100s ease-in-out infinite;
-    opacity: 0.8;
+    animation: twinkle 4s ease-in-out infinite;
 }
 
 .stars-medium {
@@ -97,8 +102,7 @@
         radial-gradient(1.5px 1.5px at 50% 50%, white 1px, transparent 0),
         radial-gradient(1.5px 1.5px at 25% 25%, rgba(167, 139, 250, 0.7) 1px, transparent 0);
     background-size: clamp(75px, 12vw, 150px) clamp(75px, 12vw, 150px);
-    animation: twinkleMove 80s ease-in-out infinite;
-    opacity: 0.9;
+    animation: twinkle 5s ease-in-out infinite 0.5s;
 }
 
 .stars-large {
@@ -106,27 +110,5 @@
         radial-gradient(2px 2px at 75% 75%, white 1px, transparent 0),
         radial-gradient(2px 2px at 25% 25%, rgba(147, 197, 253, 0.9) 1px, transparent 0);
     background-size: clamp(100px, 16vw, 200px) clamp(100px, 16vw, 200px);
-    animation: twinkleMove 60s ease-in-out infinite;
-    opacity: 1;
-}
-
-@keyframes twinkleMove {
-    0% {
-        transform: rotate(0deg) scale(1) translateZ(0);
-        opacity: 0.5;
-    }
-    25% {
-        transform: rotate(90deg) scale(1.05) translateZ(2px);
-    }
-    50% {
-        transform: rotate(180deg) scale(1) translateZ(4px);
-        opacity: 1;
-    }
-    75% {
-        transform: rotate(270deg) scale(1.05) translateZ(2px);
-    }
-    100% {
-        transform: rotate(360deg) scale(1) translateZ(0);
-        opacity: 0.5;
-    }
+    animation: twinkle 6s ease-in-out infinite 1s;
 }

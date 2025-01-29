@@ -15,12 +15,11 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
 
   return (
     <div className="pt-4 px-4 pb-4">
-      <footer className={`backdrop-blur-sm ${
-        darkMode 
-          ? 'bg-gray-900/90 text-gray-100 border border-gray-700/50' 
+      <footer className={`backdrop-blur-sm ${darkMode
+          ? 'bg-gray-900/90 text-gray-100 border border-gray-700/50'
           : 'bg-white/90 text-gray-800 border border-gray-200/50'
         } rounded-2xl shadow-xl p-8 sm:p-10 transition-all duration-300`}>
-        
+
         <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-8">
           {/* Logo Section */}
           <div className="md:flex md:justify-between">
@@ -125,6 +124,11 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                   <li>
                     <a href="https://blog.kanari.network/" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/privacypolicy" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                      PrivacyPolicy
                     </a>
                   </li>
                 </ul>
