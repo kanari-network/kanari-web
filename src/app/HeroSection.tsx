@@ -48,8 +48,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         {/* Star layers */}
                         <div className="stars-container">
                             <div className="parallax-stars stars-small"></div>
-                            <div className="parallax-stars stars-medium"></div>
-                            <div className="parallax-stars stars-large"></div>
+                            {/*<div className="parallax-stars stars-medium"></div> */}
+                            {/*<div className="parallax-stars stars-large"></div> */}
                         </div>
                     </div>
 
