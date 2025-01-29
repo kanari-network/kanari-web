@@ -39,8 +39,18 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                 {/* Features Section */}
                 <section className="relative min-h-screen overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+    
                     {/* Enhanced Cosmic Background */}
-                    <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-blue-900/30 to-purple-900/30">
+                    <div className="absolute inset-0 overflow-hidden">
+                        {/* Base gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/40 via-purple-900/30 to-black/50"></div>
+                        
+                        {/* Star layers */}
+                        <div className="stars-container">
+                            <div className="parallax-stars stars-small"></div>
+                            <div className="parallax-stars stars-medium"></div>
+                            <div className="parallax-stars stars-large"></div>
+                        </div>
                     </div>
 
                     {/* Content */}
