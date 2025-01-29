@@ -107,7 +107,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 </h2>
                 <ul className="space-y-4">
                   <li className="mb-4">
-                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                    <a href="/kanarifoundation" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Foundation
                     </a>
                   </li>
