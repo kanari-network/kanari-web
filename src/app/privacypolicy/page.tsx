@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    
+
                                     <div>
                                         <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Infrastructure Security</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
                                             </li>
                                         </ul>
                                     </div>
-                            
+
                                     <div>
                                         <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Compliance & Auditing</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -168,7 +168,7 @@ const PrivacyPolicy = () => {
                                             </li>
                                         </ul>
                                     </div>
-                            
+
                                     <div>
                                         <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Legal Requirements</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -190,7 +190,7 @@ const PrivacyPolicy = () => {
                                             </li>
                                         </ul>
                                     </div>
-                            
+
                                     <div>
                                         <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Data Protection</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -214,7 +214,7 @@ const PrivacyPolicy = () => {
                                     </div>
                                 </div>
                             </div>
-
+                            
                             {/* User Rights Section */}
                             <div className="p-8 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
                                 <h3 className="flex items-center text-2xl font-semibold text-gray-900 dark:text-white mb-6">
@@ -226,7 +226,7 @@ const PrivacyPolicy = () => {
                                 </h3>
                                 <div className="space-y-8">
                                     <div>
-                                        <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Data Control Rights</h4>
+                                        <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Account Rights</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                                             <li className="flex items-start">
                                                 <span className="bg-blue-100 dark:bg-blue-900 rounded-full p-1 mr-3 mt-1">
@@ -234,7 +234,7 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to request access, correction, or deletion of your personal data
+                                                Right to access and manage your account information
                                             </li>
                                             <li className="flex items-start">
                                                 <span className="bg-blue-100 dark:bg-blue-900 rounded-full p-1 mr-3 mt-1">
@@ -242,11 +242,11 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to data portability and transfer to another service
+                                                Right to request data export in a machine-readable format
                                             </li>
                                         </ul>
                                     </div>
-                            
+
                                     <div>
                                         <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Privacy Controls</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -256,7 +256,7 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to opt-out of data collection and processing
+                                                Right to control your privacy settings and preferences
                                             </li>
                                             <li className="flex items-start">
                                                 <span className="bg-blue-100 dark:bg-blue-900 rounded-full p-1 mr-3 mt-1">
@@ -264,13 +264,13 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to withdraw consent at any time
+                                                Right to opt-out of data collection and processing
                                             </li>
                                         </ul>
                                     </div>
-                            
+
                                     <div>
-                                        <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Additional Rights</h4>
+                                        <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">Legal Rights</h4>
                                         <ul className="space-y-4 text-gray-700 dark:text-gray-300">
                                             <li className="flex items-start">
                                                 <span className="bg-blue-100 dark:bg-blue-900 rounded-full p-1 mr-3 mt-1">
@@ -278,7 +278,7 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to lodge a complaint with supervisory authorities
+                                                Right to file complaints with regulatory authorities
                                             </li>
                                             <li className="flex items-start">
                                                 <span className="bg-blue-100 dark:bg-blue-900 rounded-full p-1 mr-3 mt-1">
@@ -286,7 +286,7 @@ const PrivacyPolicy = () => {
                                                         <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                                     </svg>
                                                 </span>
-                                                Right to object to processing of your personal data
+                                                Right to request deletion of personal information
                                             </li>
                                         </ul>
                                     </div>
