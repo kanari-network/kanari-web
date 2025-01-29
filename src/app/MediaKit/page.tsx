@@ -65,7 +65,7 @@ export default function MediaKit() {
                                 </div>
 
                                 <div className="flex py-4 sm:py-8 flex-col gap-4 sm:gap-6">
-                                    <h2 className="text-xl sm:text-2xl font-bold dark:text-white">Resources Colors</h2>
+                                    <h2 className="text-2xl font-bold dark:text-white">Resources Colors</h2>
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
                                         {colors.map((color) => (
                                             <div key={color.hex} className="flex flex-col items-center">
