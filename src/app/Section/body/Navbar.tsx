@@ -118,17 +118,17 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
                   hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/basics" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Docs</Link>
               </li>
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
                   hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/advanced" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tools</Link>
               </li>
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
                   hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/tutorials" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Resources</Link>
               </li>
             </div>
           </ul>
@@ -160,17 +160,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
               <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
                   hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
                 <Link href="/learn/basics" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Basics</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
-                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/advanced" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Advanced</Link>
-              </li>
-              <li className={`py-1 rounded-md transition-colors duration-200 ease-in-out transform 
-                  hover:-translate-y-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'}`}>
-                <Link href="/learn/tutorials" className={`block px-2 py-1 text-center 
-                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Tutorials</Link>
+                      ${darkMode ? 'text-white' : 'text-gray-800'}`}>Community</Link>
               </li>
             </div>
           </ul>
@@ -256,7 +246,7 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
             {buildOpen && (
               <ul className={`absolute top-full left-0 bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 px-4 w-48 transform transition duration-300 ease-in-out opacity-0 ${buildOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}>
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
-                  <Link href="/build/projects" className="block px-2 py-1 text-gray-800 dark:text-white">Projects</Link>
+                  <Link href="/build/projects" className="block px-2 py-1 text-gray-800 dark:text-white">Docs</Link>
                 </li>
                 <li className="py-1 rounded-md transition-colors duration-200 ease-in-out transform hover:-translate-y-1 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <Link href="/build/tools" className="block px-2 py-1 text-gray-800 dark:text-white">Tools</Link>
