@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
                                     </h2>
                                 </div>
                                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                    Your privacy is important to us. It is Kanari Network's policy to respect your privacy regarding any information we may collect from you across our website, <a href="#" className="text-blue-600 dark:text-blue-400">https://kanari.network</a>, and other sites we own and operate.
+                                    Your privacy is important to us. It is Kanari Network&apos;s policy to respect your privacy regarding any information we may collect from you across our website, <a href="#" className="text-blue-600 dark:text-blue-400">https://kanari.network</a>, and other sites we own and operate.
                                 </p>
                                 <p className="mt-4 text-gray-600 dark:text-gray-300">Last updated: March 14, 2024</p>
                             </div>
@@ -214,7 +214,7 @@ const PrivacyPolicy = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* User Rights Section */}
                             <div className="p-8 rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
                                 <h3 className="flex items-center text-2xl font-semibold text-gray-900 dark:text-white mb-6">
