@@ -107,13 +107,13 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 </h2>
                 <ul className="space-y-4">
                   <li className="mb-4">
-                    <a href="/kanarifoundation" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                    <a href="/KanariFoundation" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Kanari Foundation
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://drive.google.com/drive/folders/1cWm3pSEKFew0zhHU6OzTNzwSfnS5n4MR" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
-                      Media kit
+                    <a href="/MediaKit" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                      Media Kit
                     </a>
                   </li>
                   <li className="mb-4">
@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="/privacypolicy" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                    <a href="/PrivacyPolicy" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       PrivacyPolicy
                     </a>
                   </li>
