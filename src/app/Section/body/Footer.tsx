@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                     </a>
                   </li>
                   <li>
-                    <a href="/PrivacyPolicy" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                    <a href="/privacypolicy" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       PrivacyPolicy
                     </a>
                   </li>
