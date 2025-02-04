@@ -1,4 +1,8 @@
-import React from 'react';
+'use client';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export function OfficialChannels() {
     const channels = [
@@ -7,14 +11,15 @@ export function OfficialChannels() {
             description: "Join our Bluesky community for updates and discussions.",
             icon: (
                 <img
-                    src="/Bluesky_Logo.svg"
+                    src="/Bluesky_Logo.svg" 
                     alt="Bluesky Logo"
                     className="w-6 h-6"
-                    style={{ filter: 'brightness(0) invert(1)' }} // Makes SVG white
+                    style={{ filter: 'brightness(0) invert(1)' }}
                 />
             ),
             link: "https://bsky.app/profile/kanari.network",
-            color: "bg-blue-500"
+            color: "bg-blue-500",
+            animation: "fade-right"
         },
         {
             name: "Discord",
@@ -25,7 +30,8 @@ export function OfficialChannels() {
                 </svg>
             ),
             link: "https://discord.gg/QU6fTacXab",
-            color: "bg-indigo-500"
+            color: "bg-indigo-500",
+            animation: "fade-up"
         },
         {
             name: "GitHub",
@@ -36,9 +42,18 @@ export function OfficialChannels() {
                 </svg>
             ),
             link: "https://github.com/kanari-network",
-            color: "bg-gray-700"
+            color: "bg-gray-700",
+            animation: "fade-left"
         }
     ];
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    }, []);
 
     return (
         <section className="py-20 px-4">
@@ -48,20 +63,24 @@ export function OfficialChannels() {
                 bg-clip-text text-transparent">
                     Official Channels
                 </h2>
-        
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {channels.map((channel) => (
-                        <a key={channel.name} href={channel.link}
+                    {channels.map((channel, index) => (
+                        <a key={channel.name}
+                            href={channel.link}
+                            data-aos={channel.animation}
+                            data-aos-delay={200 + (index * 100)}
                             className="backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 border 
-                            border-gray-200/50 dark:border-gray-700/50 rounded-xl p-8 group relative 
-                            overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300"
-                        >
+                           border-gray-200/50 dark:border-gray-700/50 rounded-xl p-8 group 
+                           relative overflow-hidden hover:scale-105 hover:shadow-xl 
+                           transition-all duration-300">
+
                             <div className="relative z-10 flex flex-col items-start space-y-6">
                                 <div className={`${channel.color} p-3 rounded-full shadow-lg transform 
                                 group-hover:rotate-6 transition-transform`}>
                                     {channel.icon}
                                 </div>
-        
+
                                 <div className="space-y-4">
                                     <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-900 
                                     to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text 
@@ -71,7 +90,7 @@ export function OfficialChannels() {
                                     </p>
                                 </div>
                             </div>
-        
+
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 
                             to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl -z-10"></div>
                             <div className={`absolute -bottom-4 -right-4 w-32 h-32 ${channel.color} 

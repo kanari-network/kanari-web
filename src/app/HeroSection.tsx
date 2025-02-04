@@ -204,7 +204,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                             </div>
 
                                             {/* Content Right - Code Preview */}
-                                            <div className="opacity-0 translate-x-[100px] transition-all duration-1000 ease-out delay-300"
+                                            <div className="w-full relative mt-6 md:mt-0 transform hover:-rotate-1 transition-transform duration-300"
                                                 data-aos="fade-left"
                                                 data-aos-delay="300">
                                                 <div className="w-full relative mt-6 md:mt-0 transform hover:-rotate-1 transition-transform duration-300">
