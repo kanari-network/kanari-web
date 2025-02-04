@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kanari Network",
-  description: "Kanari Network is a modern bank card for a modern world",
+  description: "Kanari Network - A secure blockchain platform for file metadata storage and verification powered by Move VM, offering smart contract capabilities and transparent metadata management in the Web3 ecosystem.",
   icons: {
     icon: ['/icons/favicon.ico?v=4'],
     apple:['/icons/apple-touch-icon.png?v=4'],
