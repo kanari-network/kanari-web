@@ -52,7 +52,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('')
   ],
 };
 export default config;
