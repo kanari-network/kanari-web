@@ -93,8 +93,7 @@ export function NewsletterSection() {
                     </form>
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 
-                dark:from-blue-900/10 dark:to-purple-900/10 -z-10"></div>
+
             </section>
 
             {showTerms && createPortal(
