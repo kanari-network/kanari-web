@@ -11,6 +11,8 @@ import { InvestorCard } from './Section/body/InvestorCard';
 import LoadingHeroSection from './Section/body/LoadingHeroSection';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Highlight, themes } from 'prism-react-renderer'
+
 
 interface Props { }
 
@@ -176,40 +178,56 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 items-start md:items-center">
 
                                             {/* Content Left */}
-                                            <div className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
-                                                data-aos="fade-right"
-                                                data-aos-delay="100">
-                                                <div className="w-full space-y-4 sm:space-y-6 md:space-y-8 p-4 sm:p-6 md:p-8 bg-white/80 dark:bg-gray-800/80 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-sm">
-                                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                                                        Secure Metadata Management
-                                                        <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                                            Powered by Move VM
-                                                        </span>
-                                                    </h2>
-
-                                                    <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                        Store, track, and manage file metadata with enterprise-grade security.
-                                                        Our Move VM implementation ensures tamper-proof records and verifiable
-                                                        ownership across the Web3 ecosystem.
-                                                    </p>
-
-                                                    <div className="space-y-3 sm:space-y-4">
-                                                        {[
-                                                            'Cryptographic file validation',
-                                                            'Immutable ownership records',
-                                                            'Smart contract integration',
-                                                            'Decentralized storage',
-                                                        ].map((feature, index) => (
-                                                            <div key={index}
-                                                                className="flex items-center space-x-3 sm:space-x-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg transform hover:scale-102 transition-transform duration-300 cursor-pointer">
-                                                                <svg className="h-5 w-5 flex-shrink-0 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                                                </svg>
-                                                                <span className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200">{feature}</span>
-                                                            </div>
-                                                        ))}
+                                            <div 
+                                              className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
+                                              data-aos="fade-right"
+                                              data-aos-delay="100"
+                                            >
+                                              <div className="w-full space-y-4 sm:space-y-6 md:space-y-8 p-4 sm:p-6 md:p-8 bg-white/80 dark:bg-gray-800/80 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-sm">
+                                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                                                  Secure Metadata Management
+                                                  <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                                                    Powered by Move VM
+                                                  </span>
+                                                </h2>
+                                                
+                                                <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                                  Store, track, and manage file metadata with enterprise-grade security.
+                                                  Our Move VM implementation ensures tamper-proof records and verifiable
+                                                  ownership across the Web3 ecosystem.
+                                                </p>
+                                            
+                                                <div className="space-y-3 sm:space-y-4">
+                                                  {[
+                                                    'Cryptographic file validation',
+                                                    'Immutable ownership records',
+                                                    'Smart contract integration',
+                                                    'Decentralized storage',
+                                                  ].map((feature, index) => (
+                                                    <div 
+                                                      key={index}
+                                                      className="flex items-center space-x-3 sm:space-x-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg transform hover:scale-102 transition-transform duration-300 cursor-pointer"
+                                                    >
+                                                      <svg 
+                                                        className="h-5 w-5 flex-shrink-0 text-blue-500" 
+                                                        fill="none" 
+                                                        stroke="currentColor" 
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <path 
+                                                          strokeLinecap="round" 
+                                                          strokeLinejoin="round" 
+                                                          strokeWidth="2" 
+                                                          d="M5 13l4 4L19 7" 
+                                                        />
+                                                      </svg>
+                                                      <span className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200">
+                                                        {feature}
+                                                      </span>
                                                     </div>
+                                                  ))}
                                                 </div>
+                                              </div>
                                             </div>
 
                                             {/* Content Right - Code Preview */}
@@ -224,7 +242,22 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500"></div>
                                                             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500"></div>
                                                         </div>
-                                                        <code className="font-mono text-xs sm:text-sm md:text-base">{codeExample}</code>
+                                                        <Highlight
+                                                            code={codeExample}
+                                                            language="rust" // adjust based on your code language
+                                                        >
+                                                            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                                                                <code className={`font-mono text-xs sm:text-sm md:text-base ${className}`}>
+                                                                    {tokens.map((line, i) => (
+                                                                        <div key={i} {...getLineProps({ line })}>
+                                                                            {line.map((token, key) => (
+                                                                                <span key={key} {...getTokenProps({ token })} />
+                                                                            ))}
+                                                                        </div>
+                                                                    ))}
+                                                                </code>
+                                                            )}
+                                                        </Highlight>
                                                     </pre>
                                                 </div>
                                             </div>

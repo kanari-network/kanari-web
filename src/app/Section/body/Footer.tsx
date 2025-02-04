@@ -117,7 +117,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="#" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                    <a href="/Team" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
                       Team
                     </a>
                   </li>
