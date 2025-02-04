@@ -93,8 +93,8 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://github.com/kanari-network/kanari-network" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
-                      Blockchain
+                    <a href="https://github.com/kanari-network/kanari-sdk" className="inline-block hover:translate-x-1 transition-transform hover:underline decoration-2 underline-offset-4">
+                      Kanari SDK
                     </a>
                   </li>
                 </ul>
