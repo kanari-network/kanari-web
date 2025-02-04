@@ -157,18 +157,18 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                         {/* Features Section */}
 
-                        <section className="py-8 sm:py-12 md:py-24 px-4">
+                        <section className="py-20 px-4">
                             <div className="max-w-7xl mx-auto">
                                 <div className="text-center space-y-4 sm:space-y-6">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
+                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
                                         Kanari Network:
                                         <span className="block mt-2 group-hover:translate-x-2 transition-transform">
                                             Use Cases and Features
                                         </span>
-                                        <div className="h-1 w-32 sm:w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
+                                        <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
                                     </h2>
 
-                                    <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+                                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                                         Explore the capabilities of Kanari Network and Move VM for secure and transparent file metadata management in the Web3 ecosystem.
                                     </p>
                                 </div>
