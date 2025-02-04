@@ -17,6 +17,7 @@ interface Props { }
 const HeroSection: NextPage<Props> = ({ }) => {
     const [darkMode, setDarkMode] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const [isTransitioning, setIsTransitioning] = useState(true);
 
     useEffect(() => {
         AOS.init({
@@ -27,16 +28,24 @@ const HeroSection: NextPage<Props> = ({ }) => {
     }, []);
 
     useEffect(() => {
-        // Simulate loading time
-        const timer = setTimeout(() => {
+        // Add a fade transition
+        const loadTimer = setTimeout(() => {
             setIsLoading(false);
+            // Add additional delay for smooth transition
+            setTimeout(() => {
+                setIsTransitioning(false);
+            }, 500);
         }, 2000);
 
-        return () => clearTimeout(timer);
+        return () => clearTimeout(loadTimer);
     }, []);
 
-    if (isLoading) {
-        return <LoadingHeroSection />;
+    if (isLoading || isTransitioning) {
+        return (
+            <div className="transition-opacity duration-500 ease-in-out">
+                <LoadingHeroSection />
+            </div>
+        );
     }
 
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./LoadingHeroSection.css";
+
 const LoadingHeroSection = () => {
     const [progress, setProgress] = useState(0);
 
@@ -19,37 +20,63 @@ const LoadingHeroSection = () => {
     }, []);
 
     return (
-        <div className="min-h-screen w-full bg-gradient-to-r from-gray-100 to-gray-200 
-        dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
-            {/* Animated Background Elements */}
+        <div className="min-h-screen w-full bg-[#0D1117] relative overflow-hidden font-mono">
+            {/* Matrix-like Background */}
             <div className="absolute inset-0">
-                <div className="absolute w-96 h-96 bg-blue-500/20 dark:bg-blue-500/10 rounded-full 
-                blur-3xl -top-20 -left-20 animate-float-slow"></div>
-                <div className="absolute w-96 h-96 bg-purple-500/20 dark:bg-purple-500/10 rounded-full 
-                blur-3xl -bottom-20 -right-20 animate-float-delay"></div>
-                <div className="absolute w-72 h-72 bg-indigo-500/20 dark:bg-indigo-500/10 rounded-full 
-                blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                <div className="absolute w-full h-full opacity-10">
+                    {[...Array(10)].map((_, i) => (
+                        <div key={i} 
+                             className="absolute text-green-500 text-opacity-50 animate-matrix-fall"
+                             style={{
+                                 left: `${i * 10}%`,
+                                 animationDelay: `${i * 0.3}s`
+                             }}>
+                            {[...Array(20)].map((_, j) => (
+                                <div key={j}>
+                                    {Math.random().toString(36).charAt(2)}
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            {/* Progress Bar */}
-            <div className="fixed top-0 left-0 w-full h-2 bg-gray-200/50 dark:bg-gray-700/50 z-10">
-                <div className="h-full bg-gradient-to-r from-blue-500 to-purple-600 
-                transition-all duration-300 ease-out"
-                    style={{ width: `${progress}%` }} />
+            {/* Terminal-like Progress Bar */}
+            <div className="fixed top-4 left-0 w-full px-4 z-10">
+                <div className="max-w-3xl mx-auto bg-[#1F2937] p-4 rounded-lg shadow-lg border border-green-500/30">
+                    <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div className="font-mono text-sm text-green-500">
+                        $ Loading system components...
+                        <div className="h-1 bg-[#2D3748] mt-2 rounded">
+                            <div className="h-full bg-green-500 transition-all duration-300 rounded"
+                                 style={{ width: `${progress}%` }} />
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            {/* Content */}
-            <div className="container mx-auto px-4 py-20 flex flex-col items-center 
-            justify-center min-h-screen relative z-10">
-                <div className="text-8xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 
-                bg-clip-text text-transparent mb-8 animate-pulse">
+            {/* Main Content */}
+            <div className="container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen relative z-10">
+                <div className="text-9xl font-bold font-mono text-green-500 mb-8 glitch-text">
                     {Math.round(progress)}%
                 </div>
-                <div className="w-full max-w-md h-4 bg-gray-200/50 dark:bg-gray-700/50 
-                rounded-full overflow-hidden backdrop-blur-sm">
-                    <div className="h-full bg-gradient-to-r from-blue-500 to-purple-600 
-                    transition-all duration-300 ease-out"
-                        style={{ width: `${progress}%` }} />
+                <div className="w-full max-w-lg space-y-2">
+                    <div className="font-mono text-green-500 text-sm">
+                        {`> Initializing system components... ${progress < 30 ? '' : '[DONE]'}`}
+                    </div>
+                    <div className="font-mono text-green-500 text-sm">
+                        {progress >= 30 && `> Loading dependencies... ${progress < 60 ? '' : '[DONE]'}`}
+                    </div>
+                    <div className="font-mono text-green-500 text-sm">
+                        {progress >= 60 && `> Configuring environment... ${progress < 90 ? '' : '[DONE]'}`}
+                    </div>
+                    <div className="font-mono text-green-500 text-sm">
+                        {progress >= 90 && '> System ready for initialization...'}
+                    </div>
                 </div>
             </div>
         </div>
