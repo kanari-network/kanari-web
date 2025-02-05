@@ -15,7 +15,7 @@ const KanariFoundation = () => {
                 : 'bg-gradient-to-r from-gray-100 to-gray-200'
             }`}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-            <main className="relative bg-inherit">
+            <main className="relative">
 
 
                 {/* Features Section */}
