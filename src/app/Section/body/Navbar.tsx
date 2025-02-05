@@ -49,9 +49,13 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
           width={42} // Adjust width as needed
           height={42} // Adjust height as needed
         />
-        <h1 className="text-3xl font-signature ml-2">
+        <h1 className="text-4xl font-bold font-signature ml-2">
           <Link
-            className={`link-underline ${darkMode ? 'text-purple-200 hover:text-blue-200' : 'text-indigo-600 hover:text-purple-800'} hover:scale-105 duration-200 link-underline`}
+            className={`link-underline ${
+              darkMode 
+                ? 'text-purple-200 hover:text-blue-200 font-extrabold' 
+                : 'text-indigo-600 hover:text-purple-800 font-extrabold'
+            } hover:scale-105 duration-200 link-underline`}
             href="/"
           >
             Kanari

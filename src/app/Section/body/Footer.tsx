@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
           {/* Logo Section */}
           <div className="md:flex md:justify-between">
             <div className="mb-8 md:mb-0 group">
-              <a href="#" className="flex items-center">
+              <a href="/" className="flex items-center">
                 <Image
                   src="/kariicon1.png"
                   className="h-10 w-10 mr-3 transform group-hover:rotate-6 transition-transform"
@@ -143,7 +143,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className={`text-sm sm:text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               © 2025{' '}
-              <a href="#" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Kanari Network™
               </a>
               . community.
