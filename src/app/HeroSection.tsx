@@ -131,7 +131,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                             <h1 className="text-white text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight animate-slide-up opacity-0 mx-auto">
                                                 Secure Metadata
                                                 <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-200 dark:from-white dark:to-gray-400 animate-slide-up opacity-0 [animation-delay:0.2s]">
-                                                    on Move VM
+                                                    on MoveVM
                                                 </span>
                                             </h1>
 
@@ -190,13 +190,13 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                                                         Secure Metadata Management
                                                         <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                                            Powered by Move VM
+                                                            Powered by MoveVM
                                                         </span>
                                                     </h2>
 
                                                     <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                                                         Store, track, and manage file metadata with enterprise-grade security.
-                                                        Our Move VM implementation ensures tamper-proof records and verifiable
+                                                        Our MoveVM implementation ensures tamper-proof records and verifiable
                                                         ownership across the Web3 ecosystem.
                                                     </p>
 
@@ -283,7 +283,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </h2>
 
                                     <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                                        A decentralized platform leveraging Move VM to provide secure, transparent, and efficient file metadata management in the Web3 ecosystem.
+                                        A decentralized platform leveraging MoveVM to provide secure, transparent, and efficient file metadata management in the Web3 ecosystem.
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -307,7 +307,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                 </svg>
                                             }
                                             title="Smart Contract Security"
-                                            description="Built on Move VM for robust file validation, hash verification, and secure access control mechanisms."
+                                            description="Built on MoveVM for robust file validation, hash verification, and secure access control mechanisms."
                                         />
                                     </div>
 
@@ -399,7 +399,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                                 </svg>
                                             }
-                                            title="Version Control"
+                                            title="Version Control System"
                                             description="Track file history and maintain immutable records of metadata changes with transparent audit trails."
                                         />
                                     </div>
@@ -418,7 +418,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
                                                 </svg>
                                             }
-                                            title="Access Control"
+                                            title="Access Control Mechanisms"
                                             description="Manage file permissions and ownership with granular control through smart contract integration."
                                         />
                                     </div>
