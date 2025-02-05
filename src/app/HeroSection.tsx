@@ -149,7 +149,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                 <a href="#features"
                                                     className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0 animate-slide-up"
                                                 >
-                                                    View Features
+                                                    Join Testnet
                                                 </a>
                                             </div>
                                         </div>
@@ -384,7 +384,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                 </svg>
                                             }
                                             title="Secure File Tracking"
-                                            description="Implement robust file validation and hash verification systems using Move VM's advanced security features."
+                                            description="Track file history and maintain immutable records of metadata changes with transparent audit trails."
                                         />
                                     </div>
 
