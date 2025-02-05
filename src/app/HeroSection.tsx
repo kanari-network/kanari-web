@@ -23,10 +23,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
     useEffect(() => {
         AOS.init({
+            duration: 1000,
             once: true,
-            disable: 'phone',
-            duration: 700,
-            easing: 'ease-out-cubic',
+            offset: 100
         });
     }, []);
 
@@ -50,6 +49,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
             </div>
         );
     }
+
 
     const codeExample = `// Example of using Kanari Network
     module kanari::example {
@@ -182,7 +182,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
                                             {/* Content Left */}
                                             <div
-                                                className="w-full"
+                                                className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
                                                 data-aos="fade-right"
                                                 data-aos-delay="100"
                                             >
@@ -209,7 +209,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                         ].map((feature, index) => (
                                                             <div
                                                                 key={index}
-                                                                className="flex items-center gap-3 sm:gap-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg hover:bg-white/70 dark:hover:bg-gray-700/70 transition-colors"
+                                                                className="flex items-center space-x-3 sm:space-x-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg transform hover:scale-102 transition-transform duration-300 cursor-pointer"
                                                             >
                                                                 <svg
                                                                     className="h-5 w-5 flex-shrink-0 text-blue-500"
@@ -274,8 +274,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         <section className="py-20 px-4"> {/* Added dark mode gradient */}
                             <div className="max-w-7xl mx-auto text-center">
                                 <div className="text-center space-y-6">
-                                    {/* // Add will-change property for better animation performance */}
-                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group will-change-transform">
+                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
                                         Kanari Network:
                                         <span className="block mt-2 group-hover:translate-x-2 transition-transform">
                                             Secure File Metadata Platform
@@ -289,7 +288,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
 
-                                    <div data-aos="fade-right" data-aos-delay="100">
+                                    <div className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
+                                        data-aos="fade-right"
+                                        data-aos-delay="100">
                                         {/* Feature Card 1 */}
                                         <InvestorCard
                                             icon={
@@ -311,7 +312,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </div>
 
 
-                                    <div data-aos="fade-up" data-aos-delay="200">
+                                    <div className="opacity-0 translate-y-[100px] transition-all duration-1000 ease-out delay-200"
+                                        data-aos="fade-up"
+                                        data-aos-delay="200">
                                         {/* Feature Card 2 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -326,7 +329,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         />
                                     </div>
 
-                                    <div data-aos="fade-left" data-aos-delay="300">
+                                    <div className="opacity-0 translate-x-[100px] transition-all duration-1000 ease-out delay-300"
+                                        data-aos="fade-left"
+                                        data-aos-delay="300">
                                         {/* Feature Card 3 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -368,8 +373,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-
-                                    <div data-aos="fade-right" data-aos-delay="100">
+                                    <div className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
+                                        data-aos="fade-right"
+                                        data-aos-delay="100">
                                         {/* Investor Card 1 */}
                                         <InvestorCard
                                             icon={
@@ -383,7 +389,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </div>
 
 
-                                    <div data-aos="fade-up" data-aos-delay="200">
+                                    <div className="opacity-0 translate-y-[100px] transition-all duration-1000 ease-out delay-200"
+                                        data-aos="fade-up"
+                                        data-aos-delay="200">
                                         {/* Investor Card 2 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -396,7 +404,9 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         />
                                     </div>
 
-                                    <div data-aos="fade-left" data-aos-delay="300">
+                                    <div className="opacity-0 translate-x-[100px] transition-all duration-1000 ease-out delay-300"
+                                        data-aos="fade-left"
+                                        data-aos-delay="300">
                                         {/* Investor Card 3 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
