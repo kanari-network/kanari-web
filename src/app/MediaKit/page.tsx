@@ -23,7 +23,7 @@ export default function MediaKit() {
 
     return (
 
-        <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
+        <div className={darkMode ? 'dark dark:from-gray-800 dark:to-gray-900' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <main className="relative">
 
@@ -71,9 +71,8 @@ export default function MediaKit() {
                                             <div key={color.hex} className="flex flex-col items-center">
                                                 <button
                                                     onClick={() => copyToClipboard(color.hex)}
-                                                    className={`w-full max-w-[160px] h-8 sm:h-10 ${color.bgClass} rounded-lg hover:scale-105 transition-transform ${
-                                                        color.name === 'White' ? 'border dark:border-gray-600' : ''
-                                                    }`}
+                                                    className={`w-full max-w-[160px] h-8 sm:h-10 ${color.bgClass} rounded-lg hover:scale-105 transition-transform ${color.name === 'White' ? 'border dark:border-gray-600' : ''
+                                                        }`}
                                                     title={`Click to copy: ${color.hex}`}
                                                 />
                                                 <span className="mt-1 sm:mt-2 text-sm sm:text-base dark:text-white">{color.name}</span>
@@ -103,7 +102,7 @@ export default function MediaKit() {
                                                     Dimensions: 500x120px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-light.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
@@ -112,7 +111,7 @@ export default function MediaKit() {
                                                         </svg>
                                                         PNG
                                                     </button>
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-light.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >
@@ -124,7 +123,7 @@ export default function MediaKit() {
                                                 </div>
                                             </div>
                                         </div>
-                                
+
                                         {/* Dark Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 dark:bg-gray-100 p-8 rounded-lg mb-4">
@@ -140,7 +139,7 @@ export default function MediaKit() {
                                                     Dimensions: 500x120px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-dark.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
@@ -149,7 +148,7 @@ export default function MediaKit() {
                                                         </svg>
                                                         PNG
                                                     </button>
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-dark.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >
@@ -177,7 +176,7 @@ export default function MediaKit() {
                                                     Dimensions: 500x120px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-light.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
@@ -186,7 +185,7 @@ export default function MediaKit() {
                                                         </svg>
                                                         PNG
                                                     </button>
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-light.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >
@@ -198,7 +197,7 @@ export default function MediaKit() {
                                                 </div>
                                             </div>
                                         </div>
-                                
+
                                         {/* Dark Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 dark:bg-gray-100 p-8 rounded-lg mb-4">
@@ -214,7 +213,7 @@ export default function MediaKit() {
                                                     Dimensions: 500x120px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-dark.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
@@ -223,7 +222,7 @@ export default function MediaKit() {
                                                         </svg>
                                                         PNG
                                                     </button>
-                                                    <button 
+                                                    <button
                                                         onClick={() => window.open('/images/logo-dark.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >

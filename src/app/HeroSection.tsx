@@ -23,9 +23,10 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
     useEffect(() => {
         AOS.init({
-            duration: 1000,
             once: true,
-            offset: 100
+            disable: 'phone',
+            duration: 700,
+            easing: 'ease-out-cubic',
         });
     }, []);
 
@@ -49,7 +50,6 @@ const HeroSection: NextPage<Props> = ({ }) => {
             </div>
         );
     }
-
 
     const codeExample = `// Example of using Kanari Network
     module kanari::example {
@@ -84,7 +84,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
 
     return (
 
-        <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
+        <div className={darkMode ? 'dark dark:from-gray-800 dark:to-gray-900' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <main className="relative">
 
@@ -178,56 +178,56 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 items-start md:items-center">
 
                                             {/* Content Left */}
-                                            <div 
-                                              className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
-                                              data-aos="fade-right"
-                                              data-aos-delay="100"
+                                            <div
+                                                className="w-full"
+                                                data-aos="fade-right"
+                                                data-aos-delay="100"
                                             >
-                                              <div className="w-full space-y-4 sm:space-y-6 md:space-y-8 p-4 sm:p-6 md:p-8 bg-white/80 dark:bg-gray-800/80 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-sm">
-                                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                                                  Secure Metadata Management
-                                                  <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                                    Powered by Move VM
-                                                  </span>
-                                                </h2>
-                                                
-                                                <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                  Store, track, and manage file metadata with enterprise-grade security.
-                                                  Our Move VM implementation ensures tamper-proof records and verifiable
-                                                  ownership across the Web3 ecosystem.
-                                                </p>
-                                            
-                                                <div className="space-y-3 sm:space-y-4">
-                                                  {[
-                                                    'Cryptographic file validation',
-                                                    'Immutable ownership records',
-                                                    'Smart contract integration',
-                                                    'Decentralized storage',
-                                                  ].map((feature, index) => (
-                                                    <div 
-                                                      key={index}
-                                                      className="flex items-center space-x-3 sm:space-x-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg transform hover:scale-102 transition-transform duration-300 cursor-pointer"
-                                                    >
-                                                      <svg 
-                                                        className="h-5 w-5 flex-shrink-0 text-blue-500" 
-                                                        fill="none" 
-                                                        stroke="currentColor" 
-                                                        viewBox="0 0 24 24"
-                                                      >
-                                                        <path 
-                                                          strokeLinecap="round" 
-                                                          strokeLinejoin="round" 
-                                                          strokeWidth="2" 
-                                                          d="M5 13l4 4L19 7" 
-                                                        />
-                                                      </svg>
-                                                      <span className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200">
-                                                        {feature}
-                                                      </span>
+                                                <div className="w-full space-y-4 sm:space-y-6 md:space-y-8 p-4 sm:p-6 md:p-8 bg-white/80 dark:bg-gray-800/80 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-sm">
+                                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                                                        Secure Metadata Management
+                                                        <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                                                            Powered by Move VM
+                                                        </span>
+                                                    </h2>
+
+                                                    <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                                        Store, track, and manage file metadata with enterprise-grade security.
+                                                        Our Move VM implementation ensures tamper-proof records and verifiable
+                                                        ownership across the Web3 ecosystem.
+                                                    </p>
+
+                                                    <div className="space-y-3 sm:space-y-4">
+                                                        {[
+                                                            'Cryptographic file validation',
+                                                            'Immutable ownership records',
+                                                            'Smart contract integration',
+                                                            'Decentralized storage',
+                                                        ].map((feature, index) => (
+                                                            <div
+                                                                key={index}
+                                                                className="flex items-center gap-3 sm:gap-4 bg-white/50 dark:bg-gray-700/50 p-3 sm:p-4 rounded-lg hover:bg-white/70 dark:hover:bg-gray-700/70 transition-colors"
+                                                            >
+                                                                <svg
+                                                                    className="h-5 w-5 flex-shrink-0 text-blue-500"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    viewBox="0 0 24 24"
+                                                                >
+                                                                    <path
+                                                                        strokeLinecap="round"
+                                                                        strokeLinejoin="round"
+                                                                        strokeWidth="2"
+                                                                        d="M5 13l4 4L19 7"
+                                                                    />
+                                                                </svg>
+                                                                <span className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200">
+                                                                    {feature}
+                                                                </span>
+                                                            </div>
+                                                        ))}
                                                     </div>
-                                                  ))}
                                                 </div>
-                                              </div>
                                             </div>
 
                                             {/* Content Right - Code Preview */}
@@ -271,7 +271,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                         <section className="py-20 px-4"> {/* Added dark mode gradient */}
                             <div className="max-w-7xl mx-auto text-center">
                                 <div className="text-center space-y-6">
-                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group">
+                                    {/* // Add will-change property for better animation performance */}
+                                    <h2 className="text-5xl font-bold tracking-tight leading-tight bg-gradient-to-r from-gray-900 via-blue-800 to-purple-900 dark:from-white dark:via-blue-300 dark:to-purple-200 bg-clip-text text-transparent group will-change-transform">
                                         Kanari Network:
                                         <span className="block mt-2 group-hover:translate-x-2 transition-transform">
                                             Secure File Metadata Platform
@@ -285,9 +286,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
 
-                                    <div className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
-                                        data-aos="fade-right"
-                                        data-aos-delay="100">
+                                    <div data-aos="fade-right" data-aos-delay="100">
                                         {/* Feature Card 1 */}
                                         <InvestorCard
                                             icon={
@@ -309,9 +308,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </div>
 
 
-                                    <div className="opacity-0 translate-y-[100px] transition-all duration-1000 ease-out delay-200"
-                                        data-aos="fade-up"
-                                        data-aos-delay="200">
+                                    <div data-aos="fade-up" data-aos-delay="200">
                                         {/* Feature Card 2 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -326,9 +323,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         />
                                     </div>
 
-                                    <div className="opacity-0 translate-x-[100px] transition-all duration-1000 ease-out delay-300"
-                                        data-aos="fade-left"
-                                        data-aos-delay="300">
+                                    <div data-aos="fade-left" data-aos-delay="300">
                                         {/* Feature Card 3 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -370,9 +365,8 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                                    <div className="opacity-0 translate-x-[-100px] transition-all duration-1000 ease-out"
-                                        data-aos="fade-right"
-                                        data-aos-delay="100">
+
+                                    <div data-aos="fade-right" data-aos-delay="100">
                                         {/* Investor Card 1 */}
                                         <InvestorCard
                                             icon={
@@ -386,9 +380,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                     </div>
 
 
-                                    <div className="opacity-0 translate-y-[100px] transition-all duration-1000 ease-out delay-200"
-                                        data-aos="fade-up"
-                                        data-aos-delay="200">
+                                    <div data-aos="fade-up" data-aos-delay="200">
                                         {/* Investor Card 2 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={
@@ -401,9 +393,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                         />
                                     </div>
 
-                                    <div className="opacity-0 translate-x-[100px] transition-all duration-1000 ease-out delay-300"
-                                        data-aos="fade-left"
-                                        data-aos-delay="300">
+                                    <div data-aos="fade-left" data-aos-delay="300">
                                         {/* Investor Card 3 - Repeat similar structure */}
                                         <InvestorCard
                                             icon={

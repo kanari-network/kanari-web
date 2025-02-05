@@ -29,7 +29,7 @@ const Team = () => {
 
     return (
 
-        <div className={darkMode ? 'dark' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
+        <div className={darkMode ? 'dark dark:from-gray-800 dark:to-gray-900' : 'bg-gradient-to-r from-gray-100 to-gray-200'}>
             <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <main className="relative">
 
