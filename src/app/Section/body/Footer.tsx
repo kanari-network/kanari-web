@@ -144,7 +144,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className={`text-sm sm:text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               © 2025{' '}
-              <Link href="/" className="text-white">
+              <Link href="/" className={`${darkMode ? 'text-white' : 'text-gray-900'}`}>
                 Kanari Network™
               </Link>
               . community.
