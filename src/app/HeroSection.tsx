@@ -146,7 +146,7 @@ const HeroSection: NextPage<Props> = ({ }) => {
                                                 >
                                                     Explore Docs
                                                 </a>
-                                                <a href="#features"
+                                                <a href="https://gg1ycocxact.typeform.com/to/ITdq2wel"
                                                     className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-white/20 active:translate-y-0 animate-slide-up"
                                                 >
                                                     Join Testnet
