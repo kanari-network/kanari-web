@@ -12,6 +12,21 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
+  
+  // Add security headers
+  headers: async () => {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          }
+        ]
+      }
+    ];
+  }
 };
 
 export default nextConfig;
