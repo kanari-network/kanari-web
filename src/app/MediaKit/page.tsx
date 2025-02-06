@@ -179,7 +179,7 @@ export default function MediaKit() {
 
 
                                         {/* Light Logo */}
-                                        <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                                        {/* <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 p-8 rounded-lg mb-4">
                                                 <Image
                                                     src="/images/logo-light.png"
@@ -215,10 +215,10 @@ export default function MediaKit() {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         {/* Dark Logo */}
-                                        <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                                        {/* <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-100 p-8 rounded-lg mb-4">
                                                 <Image
                                                     src="/images/logo-dark.png"
@@ -254,7 +254,7 @@ export default function MediaKit() {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                     </div>
                                 </div>
