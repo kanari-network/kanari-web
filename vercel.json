@@ -12,15 +12,6 @@
           "value": "true"
         }
       ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
-        }
-      ]
     }
   ]
 }
