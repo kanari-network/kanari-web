@@ -77,7 +77,7 @@ export default function MediaKit() {
 
                                 <div className="flex py-4 sm:py-8 flex-col gap-4 sm:gap-6">
                                     <h2 className="text-2xl font-bold dark:text-white">Resources Colors</h2>
-                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-3 sm:gap-4">
                                         {colors.map((color) => (
                                             <div key={color.hex} className="flex flex-col items-center">
                                                 <button
@@ -98,6 +98,7 @@ export default function MediaKit() {
                                 <div className="flex py-8 flex-col gap-6">
                                     <h2 className="text-2xl font-bold dark:text-white">Logo Assets</h2>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
                                         {/* Light Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 p-8 rounded-lg mb-4">
@@ -112,7 +113,7 @@ export default function MediaKit() {
                                             <div className="space-y-3">
                                                 <h3 className="text-lg font-semibold dark:text-white">Light Logo</h3>
                                                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                                                    Dimensions: 500x120px
+                                                    Dimensions: 393x100px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
                                                     <button
@@ -151,7 +152,86 @@ export default function MediaKit() {
                                             <div className="space-y-3">
                                                 <h3 className="text-lg font-semibold dark:text-white">Dark Logo</h3>
                                                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                                                    Dimensions: 500x120px
+                                                    Dimensions: 393x100px
+                                                </p>
+                                                <div className="flex gap-2 justify-center">
+                                                    <button
+                                                        onClick={() => downloadFile('/images/logo-light.png')}
+                                                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
+                                                    >
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                        </svg>
+                                                        PNG
+                                                    </button>
+                                                    <button
+                                                        onClick={() => downloadFile('/images/logo-light.svg')}
+                                                        className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
+                                                    >
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                        </svg>
+                                                        SVG
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        {/* Light Logo */}
+                                        <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                                            <div className="bg-gray-800 p-8 rounded-lg mb-4">
+                                                <Image
+                                                    src="/images/logo-light.png"
+                                                    alt="Kanari Light Logo"
+                                                    width={96}
+                                                    height={96}
+                                                    className="h-24 w-auto mx-auto"
+                                                />
+                                            </div>
+                                            <div className="space-y-3">
+                                                <h3 className="text-lg font-semibold dark:text-white">Light Logo</h3>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                                    Dimensions: 393x100px
+                                                </p>
+                                                <div className="flex gap-2 justify-center">
+                                                    <button
+                                                        onClick={() => downloadFile('/images/logo-light.png')}
+                                                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
+                                                    >
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                        </svg>
+                                                        PNG
+                                                    </button>
+                                                    <button
+                                                        onClick={() => downloadFile('/images/logo-light.svg')}
+                                                        className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
+                                                    >
+                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                                        </svg>
+                                                        SVG
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Dark Logo */}
+                                        <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                                            <div className="bg-gray-100 p-8 rounded-lg mb-4">
+                                                <Image
+                                                    src="/images/logo-dark.png"
+                                                    alt="Kanari Dark Logo"
+                                                    width={96}
+                                                    height={96}
+                                                    className="h-24 w-auto mx-auto"
+                                                />
+                                            </div>
+                                            <div className="space-y-3">
+                                                <h3 className="text-lg font-semibold dark:text-white">Dark Logo</h3>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                                    Dimensions: 393x100px
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
                                                     <button
