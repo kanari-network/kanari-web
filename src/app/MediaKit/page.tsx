@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Navbar from '../Section/body/Navbar';
 import Footer from '../Section/body/Footer';
+import Image from 'next/image'
+
 
 const colors = [
     { name: 'Purple', hex: '#7C3AED', bgClass: 'bg-purple-600' },
@@ -92,9 +94,11 @@ export default function MediaKit() {
                                         {/* Light Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg mb-4">
-                                                <img
+                                                <Image
                                                     src="/images/logo-light.png"
                                                     alt="Kanari Light Logo"
+                                                    width={96}
+                                                    height={96}
                                                     className="h-24 w-auto mx-auto"
                                                 />
                                             </div>
@@ -129,9 +133,11 @@ export default function MediaKit() {
                                         {/* Dark Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 dark:bg-gray-100 p-8 rounded-lg mb-4">
-                                                <img
+                                                <Image
                                                     src="/images/logo-dark.png"
                                                     alt="Kanari Dark Logo"
+                                                    width={96}
+                                                    height={96}
                                                     className="h-24 w-auto mx-auto"
                                                 />
                                             </div>
@@ -166,9 +172,11 @@ export default function MediaKit() {
                                         {/* Light Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg mb-4">
-                                                <img
+                                                <Image
                                                     src="/images/logo-light.png"
                                                     alt="Kanari Light Logo"
+                                                    width={96}
+                                                    height={96}
                                                     className="h-24 w-auto mx-auto"
                                                 />
                                             </div>
@@ -203,9 +211,11 @@ export default function MediaKit() {
                                         {/* Dark Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                                             <div className="bg-gray-800 dark:bg-gray-100 p-8 rounded-lg mb-4">
-                                                <img
+                                                <Image
                                                     src="/images/logo-dark.png"
                                                     alt="Kanari Dark Logo"
+                                                    width={96}
+                                                    height={96}
                                                     className="h-24 w-auto mx-auto"
                                                 />
                                             </div>
