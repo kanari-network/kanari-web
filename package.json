@@ -10,9 +10,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@hotwired/turbo": "^8.0.12",
     "@types/aos": "^3.0.7",
-    "@types/hotwired__turbo": "^8.0.4",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "aos": "^2.3.4",
