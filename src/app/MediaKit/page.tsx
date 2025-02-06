@@ -10,9 +10,6 @@ const colors = [
     { name: 'Purple', hex: '#7C3AED', bgClass: 'bg-purple-600' },
     { name: 'Orange', hex: '#F97316', bgClass: 'bg-orange-500' },
     { name: 'White', hex: '#FFFFFF', bgClass: 'bg-white' },
-    { name: 'Purple', hex: '#7C3AED', bgClass: 'bg-purple-600' },
-    { name: 'Orange', hex: '#F97316', bgClass: 'bg-orange-500' },
-    { name: 'White', hex: '#FFFFFF', bgClass: 'bg-white' }
 ];
 
 export default function MediaKit() {
@@ -21,6 +18,16 @@ export default function MediaKit() {
         navigator.clipboard.writeText(hex);
         toast.success(`Copied ${hex} to clipboard!`);
     };
+
+    const downloadFile = (url: string) => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = url.split('/').pop() || '';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
 
     return (
 
@@ -93,7 +100,7 @@ export default function MediaKit() {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         {/* Light Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                                            <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg mb-4">
+                                            <div className="bg-gray-800 p-8 rounded-lg mb-4">
                                                 <Image
                                                     src="/images/logo-light.png"
                                                     alt="Kanari Light Logo"
@@ -109,7 +116,7 @@ export default function MediaKit() {
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
                                                     <button
-                                                        onClick={() => window.open('/images/logo-light.png')}
+                                                        onClick={() => downloadFile('/images/logo-light.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,7 +125,7 @@ export default function MediaKit() {
                                                         PNG
                                                     </button>
                                                     <button
-                                                        onClick={() => window.open('/images/logo-light.svg')}
+                                                        onClick={() => downloadFile('/images/logo-light.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +139,7 @@ export default function MediaKit() {
 
                                         {/* Dark Logo */}
                                         <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                                            <div className="bg-gray-800 dark:bg-gray-100 p-8 rounded-lg mb-4">
+                                            <div className="bg-gray-100 p-8 rounded-lg mb-4">
                                                 <Image
                                                     src="/images/logo-dark.png"
                                                     alt="Kanari Dark Logo"
@@ -148,7 +155,7 @@ export default function MediaKit() {
                                                 </p>
                                                 <div className="flex gap-2 justify-center">
                                                     <button
-                                                        onClick={() => window.open('/images/logo-dark.png')}
+                                                        onClick={() => downloadFile('/images/logo-light.png')}
                                                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -157,7 +164,7 @@ export default function MediaKit() {
                                                         PNG
                                                     </button>
                                                     <button
-                                                        onClick={() => window.open('/images/logo-dark.svg')}
+                                                        onClick={() => downloadFile('/images/logo-light.svg')}
                                                         className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center gap-2"
                                                     >
                                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
