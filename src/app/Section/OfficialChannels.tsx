@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from 'next/image'
 
 export function OfficialChannels() {
     const channels = [
@@ -10,9 +11,11 @@ export function OfficialChannels() {
             name: "Bluesky",
             description: "Join our Bluesky community for updates and discussions.",
             icon: (
-                <img
-                    src="/Bluesky_Logo.svg" 
+                <Image
+                    src="/Bluesky_Logo.svg"
                     alt="Bluesky Logo"
+                    width={24}
+                    height={24}
                     className="w-6 h-6"
                     style={{ filter: 'brightness(0) invert(1)' }}
                 />

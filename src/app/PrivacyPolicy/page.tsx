@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '../Section/body/Navbar';
 import Footer from '../Section/body/Footer';
-
+import Image from 'next/image';
 
 const PrivacyPolicy = () => {
     const [darkMode, setDarkMode] = useState(false);

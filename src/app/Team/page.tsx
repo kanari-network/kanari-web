@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Navbar from '../Section/body/Navbar';
 import Footer from '../Section/body/Footer';
-import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import Image from 'next/image'
 
 interface TeamMember {
     name: string;
@@ -84,9 +84,10 @@ const Team = () => {
                                                 {/* Image container */}
                                                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden shadow-lg mx-auto mb-6 
                                                     transform hover:rotate-6 transition-transform">
-                                                    <img
+                                                    <Image
                                                         src={member.image}
                                                         alt={member.name}
+                                                        fill
                                                         className="w-full h-full object-cover"
                                                     />
                                                 </div>

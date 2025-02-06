@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Navbar from '../Section/body/Navbar';
 import Footer from '../Section/body/Footer';
-import { InvestorCard } from '../Section/body/InvestorCard';
 
 const colors = [
     { name: 'Purple', hex: '#7C3AED', bgClass: 'bg-purple-600' },

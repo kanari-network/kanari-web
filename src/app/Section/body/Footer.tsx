@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 
 interface FooterProps {
   darkMode: boolean;
@@ -16,15 +17,15 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
   return (
     <div className="pt-4 px-4 pb-4">
       <footer className={`backdrop-blur-sm ${darkMode
-          ? 'bg-gray-900/90 text-gray-100 border border-gray-700/50'
-          : 'bg-white/90 text-gray-800 border border-gray-200/50'
+        ? 'bg-gray-900/90 text-gray-100 border border-gray-700/50'
+        : 'bg-white/90 text-gray-800 border border-gray-200/50'
         } rounded-2xl shadow-xl p-8 sm:p-10 transition-all duration-300`}>
 
         <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-8">
           {/* Logo Section */}
           <div className="md:flex md:justify-between">
             <div className="mb-8 md:mb-0 group">
-              <a href="/" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <Image
                   src="/kariicon1.png"
                   className="h-10 w-10 mr-3 transform group-hover:rotate-6 transition-transform"
@@ -33,10 +34,10 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                   height={40}
                 />
                 <span className="text-2xl font-bold bg-gradient-to-r from-current to-current/70 
-                    bg-clip-text hover:text-transparent transition-all duration-300">
+      bg-clip-text hover:text-transparent transition-all duration-300">
                   Kanari Network
                 </span>
-              </a>
+              </Link>
             </div>
 
             {/* Links */}
@@ -143,9 +144,9 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className={`text-sm sm:text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               © 2025{' '}
-              <a href="/" className="hover:underline">
+              <Link href="/" className="text-white">
                 Kanari Network™
-              </a>
+              </Link>
               . community.
             </span>
 
@@ -158,9 +159,11 @@ const Footer: React.FC<FooterProps> = ({ darkMode, setDarkMode }) => {
                 onMouseEnter={() => setBlueskyHover(true)}
                 onMouseLeave={() => setBlueskyHover(false)}
               >
-                <img
+                <Image
                   src="/Bluesky_Logo.svg"
                   alt="Bluesky Logo"
+                  width={20}
+                  height={20}
                   className={`w-5 h-5 ${blueskyHover ? 'transform scale-125' : ''}`}
                 />
                 <span className="sr-only">Bluesky profile</span>

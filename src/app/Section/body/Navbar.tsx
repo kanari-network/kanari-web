@@ -26,12 +26,13 @@ export default function Navbar({ darkMode, setDarkMode }: { darkMode: boolean, s
   }, [prevScrollPos]);
 
   // Load dark mode preference from localStorage on component mount
+  // Add setDarkMode to dependency array
   useEffect(() => {
     const storedDarkMode = localStorage.getItem('darkMode');
     if (storedDarkMode === 'true') {
       setDarkMode(true);
     }
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, [setDarkMode]); // Add setDarkMode as dependency
 
   // Save dark mode preference to localStorage whenever it changes
   useEffect(() => {

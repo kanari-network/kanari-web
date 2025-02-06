@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import './LatestUpdates.css';
+import Image from 'next/image'
 
 function LatestUpdates() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -90,9 +91,11 @@ function LatestUpdates() {
                             >
                                 <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-600 to-purple-600 relative">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-                                    <img 
+                                    <Image 
                                         src={blog.image} 
                                         alt={blog.title}
+                                        width={800}
+                                        height={192} 
                                         className="w-full h-48 object-cover transform 
                                                    group-hover:scale-110 group-hover:rotate-1
                                                    transition-transform duration-700 ease-out

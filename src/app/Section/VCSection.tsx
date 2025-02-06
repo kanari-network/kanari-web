@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react';
 import './VCSection.css';
 
@@ -42,7 +42,7 @@ export function VCSection() {
     const [selectedVC, setSelectedVC] = useState<number | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
-    
+
     // Auto scroll effect
     useEffect(() => {
         if (!isPaused) {
@@ -50,7 +50,7 @@ export function VCSection() {
                 if (scrollContainerRef.current) {
                     const isAtEnd = scrollContainerRef.current.scrollLeft + scrollContainerRef.current.offsetWidth >=
                         scrollContainerRef.current.scrollWidth;
-    
+
                     if (isAtEnd) {
                         scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
                     } else {
@@ -58,11 +58,11 @@ export function VCSection() {
                     }
                 }
             }, 30); // Adjust speed here
-    
+
             return () => clearInterval(interval);
         }
     }, [isPaused]);
-    
+
     return (
         <>
             {/* VC Section */}
@@ -76,7 +76,7 @@ export function VCSection() {
                             </span>
                             <div className="h-1 w-48 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transform origin-left group-hover:scale-x-125 transition-transform"></div>
                         </h2>
-    
+
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                             Kanari Network is supported by a strong network of investors who believe in our vision.
                         </p>
@@ -85,12 +85,12 @@ export function VCSection() {
                         {/* Gradient Masks */}
                         <div className="absolute left-0 top-0 bottom-0"></div>
                         <div className="absolute right-0 top-0 bottom-0"></div>
-    
+
                         <div className="relative overflow-hidden">
                             {/* Gradient Masks */}
                             <div className="absolute left-0 top-0 bottom-0 w-8"></div>
                             <div className="absolute right-0 top-0 bottom-0 w-8"></div>
-    
+
                             {/* Scrollable Container */}
                             <div
                                 ref={scrollContainerRef}
@@ -112,9 +112,11 @@ export function VCSection() {
                                     >
                                         <div className="relative w-full h-full bg-gray-100 dark:bg-gray-800 rounded-full">
                                             {/* Image with fallback */}
-                                            <img
+                                            <Image
                                                 src={vc.logo}
                                                 alt={vc.name}
+                                                width={100}
+                                                height={100}
                                                 className="w-full h-full object-cover rounded-full"
                                                 onError={(e) => {
                                                     e.currentTarget.src = '/placeholder.png';
@@ -124,7 +126,7 @@ export function VCSection() {
                                     </button>
                                 ))}
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
@@ -159,9 +161,11 @@ export function VCSection() {
                             </svg>
                         </button>
                         <div className="flex flex-col items-center">
-                            <img
+                            <Image
                                 src={vcs[selectedVC].logo}
                                 alt={vcs[selectedVC].name}
+                                width={128}
+                                height={128}
                                 className="w-32 h-32 rounded-full mb-6"
                             />
                             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
@@ -174,7 +178,7 @@ export function VCSection() {
                     </div>
                 </div>
             )}
-    
+
         </>
     );
 }
